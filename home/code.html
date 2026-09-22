@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Korean Skincare UX Case Study</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"error-container": "#ffdad6", "tertiary-fixed": "#bcf19f", "tertiary-fixed-dim": "#a0d585", "on-secondary-container": "#7b5668", "on-surface-variant": "#514349", "surface-container-highest": "#eddfe3", surface: "#fff8f8", "surface-container-low": "#fef0f4", "on-background": "#201a1d", "surface-dim": "#e4d7db", "surface-bright": "#fff8f8", "primary-fixed-dim": "#ffafd8", "inverse-primary": "#ffafd8", "on-primary": "#ffffff", secondary: "#785466", "surface-container": "#f8eaee", "surface-container-high": "#f3e5e9", "surface-variant": "#eddfe3", "surface-container-lowest": "#ffffff", "outline-variant": "#d6c1c9", "primary-container": "#ffa4d4", "secondary-container": "#ffd0e5", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#062100", "on-tertiary-fixed-variant": "#245110", "tertiary-container": "#9ace7f", "on-tertiary-container": "#2b5818", "on-secondary-fixed": "#2e1222", "inverse-surface": "#362e31", "on-error": "#ffffff", "surface-tint": "#8f4570", "on-primary-container": "#7c355f", "inverse-on-surface": "#fbedf1", background: "#fff8f8", outline: "#84737a", "on-primary-fixed": "#3c0029", "primary-fixed": "#ffd8e9", "on-primary-fixed-variant": "#732d57", primary: "#8f4570", tertiary: "#3b6927", "on-secondary": "#ffffff", error: "#ba1a1a", "on-surface": "#201a1d", "on-secondary-fixed-variant": "#5e3d4e", "on-error-container": "#93000a", "secondary-fixed": "#ffd8e9", "secondary-fixed-dim": "#e8bacf"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"margin-mobile": "20px", gutter: "24px", unit: "8px", "container-max": "1280px", "margin-desktop": "64px"}, fontFamily: {display: ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], body: ["Plus Jakarta Sans"], label: ["Plus Jakarta Sans"]}, fontSize: {display: ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "label-caps": ["12px", {lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "1.2", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px rgba(111, 54, 55, 0.05);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(111, 54, 55, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<span class="font-display text-2xl md:text-3xl text-on-surface tracking-tighter">Korean Skincare</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="../index.html#ux-review">UX Review</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="../index.html#key-issues">Key Issues</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="../index.html#improvements">Improvements</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-caps text-label-caps uppercase tracking-widest hover:opacity-90 transition-smooth">
+                Contact
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Intro -->
+<header class="text-center mb-16 space-y-4">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-primary">Case Study • 2026</span>
+<h1 class="font-display text-display md:text-[56px] text-on-surface leading-tight max-w-4xl mx-auto">Elevating Korean Beauty Discovery.</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed max-w-2xl mx-auto">
+                A UX research and design deep-dive into the "Ritual of Choice" for Korean Skincare, focusing on reducing friction and elevating the curation experience.
+            </p>
+</header>
+<!-- Core Sections Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- 01. UX Review Card -->
+<a class="group bg-surface-container-lowest rounded-xl p-8 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow" href="../index.html#ux-review">
+<div class="flex items-center justify-between mb-8">
+<span class="font-display text-4xl text-primary/20">01</span>
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">UX Review</h2>
+<p class="text-on-surface-variant flex-grow font-body-md">
+                    A comprehensive audit of the current product context, research strategy, and initial user observations regarding the "Ritual of Discovery".
+                </p>
+<div class="mt-8 flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-[0.15em] font-label-caps">
+                    Explore Research
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</a>
+<!-- 02. Key Issues Card -->
+<a class="group bg-surface-container-lowest rounded-xl p-8 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow" href="../index.html#key-issues">
+<div class="flex items-center justify-between mb-8">
+<span class="font-display text-4xl text-primary/20">02</span>
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">error_outline</span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">Key Issues</h2>
+<p class="text-on-surface-variant flex-grow font-body-md">
+                    Identification of high-friction pain points through a detailed UX friction log and severity analysis of the current e-commerce experience.
+                </p>
+<div class="mt-8 flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-[0.15em] font-label-caps">
+                    View Pain Points
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</a>
+<!-- 03. Improvements Card -->
+<a class="group bg-surface-container-lowest rounded-xl p-8 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow" href="../index.html#improvements">
+<div class="flex items-center justify-between mb-8">
+<span class="font-display text-4xl text-primary/20">03</span>
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">Improvements</h2>
+<p class="text-on-surface-variant flex-grow font-body-md">
+                    Redesign solutions including contextual navigation, smart entry points, and unified filtering to create a seamless Ritual of Choice.
+                </p>
+<div class="mt-8 flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-[0.15em] font-label-caps">
+                    See Redesign
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full py-12 mt-12 border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-6 md:space-y-0">
+<span class="font-display text-on-surface-variant text-2xl">Korean Skincare</span>
+<p class="font-body-md text-sm text-on-surface-variant/80">
+                © 2026 Korean Skincare UX Research. All rights reserved.
+            </p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-label-caps uppercase" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-label-caps uppercase" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold font-label-caps uppercase" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+<!-- Scroll Back to Top -->
+<div class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg cursor-pointer transform hover:scale-110 transition-smooth opacity-0" id="scrollProgress">
+<span class="material-symbols-outlined">expand_less</span>
+</div>
+<script>
+        const scrollBtn = document.getElementById('scrollProgress');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollBtn.style.opacity = "1";
+            } else {
+                scrollBtn.style.opacity = "0";
+            }
+        };
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body></html>

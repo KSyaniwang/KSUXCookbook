@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Improvements &amp; Roadmap | Korean Skincare UX Case Study</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#211a1d",
+                        "secondary-fixed-dim": "#e8bacf",
+                        "on-secondary-container": "#7b5668",
+                        "on-primary-fixed-variant": "#732d57",
+                        "background": "#fff8f8",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#2b5818",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#eddfe3",
+                        "on-secondary-fixed-variant": "#5e3d4e",
+                        "inverse-primary": "#ffafd8",
+                        "tertiary-fixed-dim": "#a0d585",
+                        "secondary-fixed": "#ffd8e9",
+                        "tertiary-container": "#9ace7f",
+                        "tertiary": "#3b6927",
+                        "on-surface-variant": "#514349",
+                        "outline": "#84737a",
+                        "surface-container-high": "#f3e4e9",
+                        "primary": "#8f4570",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffafd8",
+                        "tertiary-fixed": "#bcf19f",
+                        "surface-container-low": "#fff0f4",
+                        "on-tertiary-fixed": "#062100",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f9eaef",
+                        "primary-fixed": "#ffd8e9",
+                        "on-surface": "#211a1d",
+                        "outline-variant": "#d6c1c9",
+                        "surface-bright": "#fff8f8",
+                        "primary-container": "#ffa4d4",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#ffd0e5",
+                        "inverse-surface": "#362e32",
+                        "on-primary-fixed": "#3c0029",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#fcedf1",
+                        "surface-tint": "#8f4570",
+                        "secondary": "#785466",
+                        "on-tertiary-fixed-variant": "#245110",
+                        "on-primary-container": "#7c355f",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#eddfe3",
+                        "surface-dim": "#e5d6db",
+                        "surface": "#fff8f8",
+                        "on-secondary-fixed": "#2e1222",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(255,248,248,0) 0%, rgba(255,240,244,1) 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 40px -10px rgba(143, 69, 112, 0.08);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(214, 193, 201, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<span class="font-display-lg text-display-lg text-on-surface dark:text-on-surface tracking-tighter">Korean Skincare</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-wider" href="#">Context</a>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-wider" href="#">Strategy</a>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-wider" href="#">Audit</a>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-wider" href="#">Issues</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm uppercase tracking-wider" href="#">Proposed</a>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-wider" href="#">Validation</a>
+<a class="text-on-surface-variant dark:text-on-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-wider" href="#">Plan</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary/90 transition-all">Contact</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Section 1: Interactive Prototype -->
+<section class="relative py-24 md:py-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">DESIGN INTERVENTION</span>
+<h1 class="font-display text-display md:text-display mb-6 text-on-surface max-w-3xl mx-auto">The Proposed Solution</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-16">
+                    A streamlined discovery journey focusing on clarity, guidance, and consistent interaction patterns.
+                </p>
+<!-- High Fidelity Prototype Container -->
+<div class="relative mx-auto max-w-5xl group">
+<div class="absolute -inset-4 bg-primary/5 rounded-[2rem] blur-2xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<div class="relative glass-panel rounded-xl overflow-hidden aspect-video card-shadow flex items-center justify-center border-outline-variant/30">
+<div class="flex flex-col items-center gap-6">
+<div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary text-4xl">play_circle</span>
+</div>
+<div class="space-y-2">
+<p class="font-headline-md text-headline-md text-primary">Interactive Hi-Fi Prototype</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Click to explore the redesigned flows</p>
+</div>
+</div>
+<!-- Simulated Prototype UI Elements -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<div class="absolute top-8 left-8 w-48 h-4 bg-primary/20 rounded"></div>
+<div class="absolute top-16 left-8 w-32 h-4 bg-primary/10 rounded"></div>
+<div class="absolute bottom-8 right-8 grid grid-cols-2 gap-4">
+<div class="w-24 h-10 bg-primary/30 rounded"></div>
+<div class="w-24 h-10 bg-primary rounded"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Design Rationale -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">STRATEGIC ALIGNMENT</span>
+<h2 class="font-headline-lg text-headline-lg md:text-headline-lg text-on-surface">Why These Fixes Work</h2>
+</div>
+<div class="h-[1px] flex-grow bg-outline-variant/50 mb-4 hidden md:block mx-12"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface p-10 rounded-xl card-shadow border border-outline-variant/20 hover:-translate-y-2 transition-transform duration-500">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-secondary-container">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Reduced Cognitive Load</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Simplified filtering and clear product cues allow users to make decisions without feeling overwhelmed by choice paralysis.
+                        </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface p-10 rounded-xl card-shadow border border-outline-variant/20 hover:-translate-y-2 transition-transform duration-500">
+<div class="w-12 h-12 bg-tertiary-container rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-tertiary-container">explore</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Guidance-First Discovery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Contextual entry points for skin concerns guide novices while providing efficiency for experts seeking specific clinical ingredients.
+                        </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-10 rounded-xl card-shadow border border-outline-variant/20 hover:-translate-y-2 transition-transform duration-500">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-primary-container">sync</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Consistent Mental Models</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Aligning search and browse behaviors reduces friction and builds user trust through predictable interface responses.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Implementation Roadmap -->
+<section class="py-24 md:py-32 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">FUTURE VISION</span>
+<h2 class="font-display text-display text-on-surface">Phased Roadmap</h2>
+</div>
+<div class="relative">
+<!-- Vertical Timeline Line -->
+<div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant/50 hidden md:block"></div>
+<div class="space-y-16 relative">
+<!-- Phase 1 -->
+<div class="flex flex-col md:flex-row items-center gap-12 group">
+<div class="flex-1 text-right order-1 md:order-1">
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/30 group-hover:border-primary/40 transition-colors">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Phase 1: Quick Wins</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center justify-end gap-2">Align filter/sort behavior <span class="w-1.5 h-1.5 rounded-full bg-primary"></span></li>
+<li class="flex items-center justify-end gap-2">Improve product card hierarchy <span class="w-1.5 h-1.5 rounded-full bg-primary"></span></li>
+<li class="flex items-center justify-end gap-2">Add clearer labels/CTAs <span class="w-1.5 h-1.5 rounded-full bg-primary"></span></li>
+</ul>
+</div>
+</div>
+<div class="z-10 w-10 h-10 rounded-full bg-primary border-4 border-surface shadow-md flex items-center justify-center order-2">
+<span class="text-white text-xs font-bold">01</span>
+</div>
+<div class="flex-1 order-3 hidden md:block"></div>
+</div>
+<!-- Phase 2 -->
+<div class="flex flex-col md:flex-row items-center gap-12 group">
+<div class="flex-1 order-1 hidden md:block"></div>
+<div class="z-10 w-10 h-10 rounded-full bg-primary border-4 border-surface shadow-md flex items-center justify-center order-2">
+<span class="text-white text-xs font-bold">02</span>
+</div>
+<div class="flex-1 order-3">
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/30 group-hover:border-primary/40 transition-colors">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Phase 2: Design System</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant text-left">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Reusable filter chips</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Card components &amp; states</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Shared design tokens</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="flex flex-col md:flex-row items-center gap-12 group">
+<div class="flex-1 text-right order-1 md:order-1">
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/30 group-hover:border-primary/40 transition-colors">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Phase 3: Prototype &amp; Validation</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center justify-end gap-2">Clickable Figma prototype <span class="w-1.5 h-1.5 rounded-full bg-primary"></span></li>
+<li class="flex items-center justify-end gap-2">User testing (3-5 users) <span class="w-1.5 h-1.5 rounded-full bg-primary"></span></li>
+<li class="flex items-center justify-end gap-2">Performance KPI tracking <span class="w-1.5 h-1.5 rounded-full bg-primary"></span></li>
+</ul>
+</div>
+</div>
+<div class="z-10 w-10 h-10 rounded-full bg-primary border-4 border-surface shadow-md flex items-center justify-center order-2">
+<span class="text-white text-xs font-bold">03</span>
+</div>
+<div class="flex-1 order-3 hidden md:block"></div>
+</div>
+<!-- Phase 4 -->
+<div class="flex flex-col md:flex-row items-center gap-12 group">
+<div class="flex-1 order-1 hidden md:block"></div>
+<div class="z-10 w-10 h-10 rounded-full bg-primary border-4 border-surface shadow-md flex items-center justify-center order-2">
+<span class="text-white text-xs font-bold">04</span>
+</div>
+<div class="flex-1 order-3">
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/30 group-hover:border-primary/40 transition-colors">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Phase 4: Handoff</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant text-left">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Annotated screens &amp; specs</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Filter taxonomy docs</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Responsive edge cases</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Footer Image -->
+<div class="w-full h-80 overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full" style="background-image: url('../assets/footer-skincare.jpg')"></div>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest w-full py-stack-md mt-stack-lg border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-32">
+<span class="font-display-lg text-display-lg text-on-surface-variant">Korean Skincare</span>
+<div class="flex flex-col items-center md:items-end gap-2">
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:underline decoration-primary/30 underline-offset-4 opacity-90 hover:opacity-100 transition-opacity" href="#">About Me</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:underline decoration-primary/30 underline-offset-4 opacity-90 hover:opacity-100 transition-opacity" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:underline decoration-primary/30 underline-offset-4 opacity-90 hover:opacity-100 transition-opacity" href="#">LinkedIn</a>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-60">© 2026 Korean Skincare UX Research. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for prototype container
+        const protoContainer = document.querySelector('.glass-panel');
+        if (protoContainer) {
+            protoContainer.addEventListener('mouseenter', () => {
+                protoContainer.style.transform = 'translateY(-4px) scale(1.01)';
+                protoContainer.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+            });
+            protoContainer.addEventListener('mouseleave', () => {
+                protoContainer.style.transform = 'translateY(0) scale(1)';
+            });
+        }
+    </script>
+</body></html>

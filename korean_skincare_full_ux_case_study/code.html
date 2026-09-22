@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Korean Skincare UX Case Study - Detailed Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"error-container": "#ffdad6", "tertiary-fixed": "#bcf19f", "tertiary-fixed-dim": "#a0d585", "on-secondary-container": "#7b5668", "on-surface-variant": "#514349", "surface-container-highest": "#eddfe3", surface: "#fff8f8", "surface-container-low": "#fef0f4", "on-background": "#201a1d", "surface-dim": "#e4d7db", "surface-bright": "#fff8f8", "primary-fixed-dim": "#ffafd8", "inverse-primary": "#ffafd8", "on-primary": "#ffffff", secondary: "#785466", "surface-container": "#f8eaee", "surface-container-high": "#f3e5e9", "surface-variant": "#eddfe3", "surface-container-lowest": "#ffffff", "outline-variant": "#d6c1c9", "primary-container": "#ffa4d4", "secondary-container": "#ffd0e5", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#062100", "on-tertiary-fixed-variant": "#245110", "tertiary-container": "#9ace7f", "on-tertiary-container": "#2b5818", "on-secondary-fixed": "#2e1222", "inverse-surface": "#362e31", "on-error": "#ffffff", "surface-tint": "#8f4570", "on-primary-container": "#7c355f", "inverse-on-surface": "#fbedf1", background: "#fff8f8", outline: "#84737a", "on-primary-fixed": "#3c0029", "primary-fixed": "#ffd8e9", "on-primary-fixed-variant": "#732d57", primary: "#8f4570", tertiary: "#3b6927", "secondary-fixed-dim": "#e8bacf", "on-secondary": "#ffffff", error: "#ba1a1a", "on-surface": "#201a1d", "on-secondary-fixed-variant": "#5e3d4e", "on-error-container": "#93000a", "secondary-fixed": "#ffd8e9"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"stack-md": "32px", "margin-mobile": "20px", "stack-lg": "64px", "container-max": "1280px", "stack-sm": "16px", gutter: "24px"}, fontFamily: {display: ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], body: ["Plus Jakarta Sans"], label: ["Plus Jakarta Sans"]}, fontSize: {display: ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "600"}], "headline-lg-mobile": ["28px", {lineHeight: "1.2", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "label-caps": ["12px", {lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px rgba(111, 54, 55, 0.05);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(111, 54, 55, 0.1);
+        }
+        .active-node {
+            border-color: #6f3637 !important;
+            background-color: #ffdad9 !important;
+            box-shadow: 0 0 0 4px rgba(255, 218, 217, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-outline-variant/20 h-20 flex items-center">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full">
+<span class="font-display text-2xl md:text-3xl text-on-surface tracking-tighter">Korean Skincare</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#context">Context</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#strategy">Strategy</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#journey">Journey</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-caps text-label-caps uppercase tracking-widest hover:opacity-90 transition-smooth shadow-sm">
+                Contact
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Header -->
+<header class="px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center mb-24 space-y-4">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary">UX Deep-Dive • 2026</span>
+<h1 class="font-display text-display md:text-[64px] text-on-surface leading-tight max-w-4xl mx-auto">Ritual of Discovery: A UX Analysis</h1>
+<p class="text-on-surface-variant font-body-md text-lg leading-relaxed max-w-2xl mx-auto">
+                From fragmented curation to a seamless selection process. How we redesigned the K-Beauty discovery journey.
+            </p>
+</header>
+<!-- Section 1: Product Context -->
+<section class="mb-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="context">
+<div class="bg-surface-container-lowest rounded-3xl p-8 md:p-12 border border-outline-variant/30 soft-shadow">
+<div class="flex items-center gap-4 mb-12">
+<div class="w-10 h-1 md:w-16 bg-primary rounded-full"></div>
+<h2 class="font-display text-3xl md:text-4xl">Product Context</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+<div>
+<h3 class="font-headline-lg text-xl mb-4 text-primary">Primary Purpose</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Korean Skincare is a curated marketplace designed to bridge the gap between complex Korean skincare routines and Western consumers. The platform aims to demystify active ingredients and multi-step rituals through personalized curation.
+                        </p>
+</div>
+<div>
+<h3 class="font-headline-lg text-xl mb-4 text-primary">Target Users</h3>
+<ul class="space-y-3 text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span><strong>The Skintellectual:</strong> Knowledgeable users looking for specific formulations.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span><strong>The Novice:</strong> Overwhelmed by options, seeking guided discovery.</span>
+</li>
+</ul>
+</div>
+</div>
+<h3 class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant/60 mb-8">Competitive Benchmarks</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<!-- Benchmark 1 -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/30 card-hover transition-smooth">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">shopping_bag</span>
+</div>
+<span class="font-bold">Soko Glam</span>
+</div>
+<p class="text-sm text-on-surface-variant">Industry leader with educational focus but high information density that can lead to choice paralysis.</p>
+</div>
+<!-- Benchmark 2 -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/30 card-hover transition-smooth">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">face</span>
+</div>
+<span class="font-bold">Peach &amp; Lily</span>
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded-full font-label-caps">Top Performer</span>
+</div>
+<p class="text-sm text-on-surface-variant">Excellent quiz-based personalization. Sets the bar for "Skin Concerns" navigation architecture.</p>
+</div>
+<!-- Benchmark 3 -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/30 card-hover transition-smooth">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">science</span>
+</div>
+<span class="font-bold">Olive Young</span>
+</div>
+<p class="text-sm text-on-surface-variant">Global reach but UX feels cluttered with generic e-commerce patterns that lose the brand's boutique feel.</p>
+</div>
+</div>
+<div class="bg-primary-fixed/30 rounded-2xl p-8 border border-primary-fixed">
+<h3 class="font-label-caps text-label-caps uppercase tracking-widest text-on-primary-fixed-variant mb-4">Main Use Cases Summary</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="flex gap-4">
+<span class="text-2xl font-display text-primary/30">01</span>
+<div>
+<span class="font-bold block text-sm">Ingredient Lookup</span>
+<span class="text-xs text-on-surface-variant">Searching for specific actives.</span>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="text-2xl font-display text-primary/30">02</span>
+<div>
+<span class="font-bold block text-sm">Concern Matching</span>
+<span class="text-xs text-on-surface-variant">Finding products for sensitivity.</span>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="text-2xl font-display text-primary/30">03</span>
+<div>
+<span class="font-bold block text-sm">Routine Building</span>
+<span class="text-xs text-on-surface-variant">Creating a 5-step regimen.</span>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="text-2xl font-display text-primary/30">04</span>
+<div>
+<span class="font-bold block text-sm">Restock Refill</span>
+<span class="text-xs text-on-surface-variant">Fast paths for returning users.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Why I Chose This Flow -->
+<section class="mb-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="strategy">
+<div class="bg-surface-container rounded-3xl p-8 md:p-12 border border-outline-variant/30 soft-shadow">
+<div class="flex items-center gap-4 mb-12">
+<div class="w-10 h-1 md:w-16 bg-primary rounded-full"></div>
+<h2 class="font-display text-3xl md:text-4xl">Strategic Choice</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-7 space-y-8">
+<div class="relative aspect-[16/10] bg-surface-container-high rounded-2xl overflow-hidden border border-outline-variant/30">
+<div class="absolute inset-0 flex items-center justify-center text-on-surface-variant/40 italic">
+                                {{DATA:IMAGE:SCREENSHOT_APP_FLOW}}
+                            </div>
+<!-- Annotation Callouts -->
+<div class="absolute top-1/4 left-1/4 group cursor-pointer">
+<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-[10px] font-bold shadow-lg animate-pulse">1</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-inverse-surface text-inverse-on-surface text-xs p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                                    Navigation entry points lack clear hierarchy, leading to cognitive load.
+                                </div>
+</div>
+<div class="absolute top-1/2 right-1/4 group cursor-pointer">
+<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-[10px] font-bold shadow-lg animate-pulse">2</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-inverse-surface text-inverse-on-surface text-xs p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                                    Filtering system is hidden, causing users to scroll excessively.
+                                </div>
+</div>
+<div class="absolute bottom-1/3 left-1/2 group cursor-pointer">
+<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-[10px] font-bold shadow-lg animate-pulse">3</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-inverse-surface text-inverse-on-surface text-xs p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                                    Product cards lack immediate benefit clarity (concerns, skin types).
+                                </div>
+</div>
+<div class="absolute top-10 right-10 group cursor-pointer">
+<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-[10px] font-bold shadow-lg animate-pulse">4</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-inverse-surface text-inverse-on-surface text-xs p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                                    The "Hero" banner takes up 80% of the initial viewport without driving action.
+                                </div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-6">
+<h3 class="font-headline-lg text-2xl">Why focus on the Discovery Flow?</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Data shows that 72% of users drop off before reaching a Product Detail Page (PDP). The current "Discovery" phase—moving from Home to Category Listing—is where the brand promise of "simple curation" is tested.
+                        </p>
+<p class="text-on-surface-variant leading-relaxed">
+                            By optimizing this specific flow, we can increase the <strong>Cart Conversion Rate</strong> by ensuring users feel confident in their product choices early in the funnel.
+                        </p>
+<div class="pt-6 border-t border-outline-variant/30">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="font-bold text-sm uppercase tracking-widest font-label-caps">Target KPI: -15% Bounce Rate</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Current Experience (Interactive Flow) -->
+<section class="px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="journey">
+<div class="bg-surface-container-low rounded-3xl p-8 md:p-12 border border-outline-variant/20 soft-shadow overflow-hidden">
+<div class="flex items-center gap-4 mb-12">
+<div class="w-10 h-1 md:w-16 bg-primary rounded-full"></div>
+<h2 class="font-display text-3xl md:text-4xl">The Current Journey</h2>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Flowchart Visualization -->
+<div class="lg:w-2/3 space-y-4">
+<p class="text-sm text-on-surface-variant mb-8 uppercase tracking-widest font-semibold font-label-caps">User Interaction Nodes (Select to View Audit Notes)</p>
+<div class="flex flex-col gap-8 relative">
+<!-- Connector Line -->
+<div class="absolute left-6 top-6 bottom-6 w-0.5 bg-outline-variant/40"></div>
+<!-- Node 1 -->
+<div class="relative z-10 flex items-center gap-6 p-4 rounded-xl border-2 border-transparent hover:border-primary/20 bg-surface-container-lowest cursor-pointer transition-smooth active-node" id="node-1" onclick="showNodeDetails(1)">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined">home</span>
+</div>
+<div>
+<h4 class="font-bold">Homepage Entry</h4>
+<p class="text-sm text-on-surface-variant">User lands and looks for guidance.</p>
+</div>
+</div>
+<!-- Node 2 -->
+<div class="relative z-10 flex items-center gap-6 p-4 rounded-xl border-2 border-transparent hover:border-primary/20 bg-surface-container-lowest cursor-pointer transition-smooth" id="node-2" onclick="showNodeDetails(2)">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">menu_open</span>
+</div>
+<div>
+<h4 class="font-bold">Main Navigation</h4>
+<p class="text-sm text-on-surface-variant">Navigating through shop categories.</p>
+</div>
+</div>
+<!-- Node 3 -->
+<div class="relative z-10 flex items-center gap-6 p-4 rounded-xl border-2 border-transparent hover:border-primary/20 bg-surface-container-lowest cursor-pointer transition-smooth" id="node-3" onclick="showNodeDetails(3)">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">filter_list</span>
+</div>
+<div>
+<h4 class="font-bold">Product Grid (PLP)</h4>
+<p class="text-sm text-on-surface-variant">Filtering and browsing results.</p>
+</div>
+</div>
+<!-- Node 4 -->
+<div class="relative z-10 flex items-center gap-6 p-4 rounded-xl border-2 border-transparent hover:border-primary/20 bg-surface-container-lowest cursor-pointer transition-smooth" id="node-4" onclick="showNodeDetails(4)">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div>
+<h4 class="font-bold">Product Detail</h4>
+<p class="text-sm text-on-surface-variant">Assessing product fit and value.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Panel -->
+<div class="lg:w-1/3">
+<div class="bg-surface-container-high rounded-2xl p-8 border border-outline-variant/30 h-full min-h-[400px] flex flex-col transition-all duration-300" id="details-container">
+<div class="mb-6" id="detail-header">
+<span class="font-label-caps text-primary uppercase tracking-widest text-[10px] block mb-2">Detailed Observations</span>
+<h3 class="font-headline-lg text-2xl" id="detail-title">Homepage Entry</h3>
+</div>
+<div class="text-on-surface-variant space-y-4 flex-grow" id="detail-content">
+<p>Current users feel a "Wall of Content" upon landing. The core value proposition of "Curated Rituals" is buried below the fold.</p>
+<div class="p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/20">
+<span class="font-bold text-xs uppercase text-primary block mb-1 font-label-caps">UX Friction Log:</span>
+<p class="text-sm italic">"I'm not sure where to start. There are too many beautiful images but no clear 'Start Here' for my skin type."</p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/40">
+<span class="text-xs font-bold text-on-surface font-label-caps uppercase tracking-wider">Severity Rating:</span>
+<div class="flex gap-1 mt-2">
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-4 h-4 bg-primary/20 rounded-full"></div>
+<div class="w-4 h-4 bg-primary/20 rounded-full"></div>
+<div class="w-4 h-4 bg-primary/20 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full py-stack-md mt-stack-lg border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto pt-8">
+<span class="font-display text-3xl text-on-surface-variant">Korean Skincare</span>
+<p class="font-body-md text-sm text-on-surface-variant/80 mt-4 md:mt-0">
+                © 2026 Korean Skincare UX Research. All rights reserved.
+            </p>
+<div class="flex gap-8 mt-6 md:mt-0">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold hover:underline decoration-primary/30 underline-offset-4" href="#">About Me</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold hover:underline decoration-primary/30 underline-offset-4" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold hover:underline decoration-primary/30 underline-offset-4" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+<script>
+        const nodeData = {
+            1: {
+                title: "Homepage Entry",
+                content: "<p>Current users feel a 'Wall of Content' upon landing. The core value proposition of 'Curated Rituals' is buried below the fold.</p><div class='p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/20'><span class='font-bold text-xs uppercase text-primary block mb-1 font-label-caps'>UX Friction Log:</span><p class='text-sm italic'>\"I'm not sure where to start. There are too many beautiful images but no clear 'Start Here' for my skin type.\"</p></div>",
+                severity: 2
+            },
+            2: {
+                title: "Main Navigation",
+                content: "<p>Navigation labels are purely product-based (Cleansers, Toners) rather than solution-based (Acne, Dryness). This requires users to already know what product category solves their problem.</p><div class='p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/20'><span class='font-bold text-xs uppercase text-primary block mb-1 font-label-caps'>UX Friction Log:</span><p class='text-sm italic'>\"I know I have redness, but I don't know if I need a serum or a moisturizer for that. The menu doesn't help me decide.\"</p></div>",
+                severity: 4
+            },
+            3: {
+                title: "Product Grid (PLP)",
+                content: "<p>Filters are hidden within a drawer, making the initial view overwhelmed by 50+ items. There is no 'Quick View' which forces a full page reload for every item investigated.</p><div class='p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/20'><span class='font-bold text-xs uppercase text-primary block mb-1 font-label-caps'>UX Friction Log:</span><p class='text-sm italic'>\"I have to click back and forth between the list and products. It's tedious to compare two different toners.\"</p></div>",
+                severity: 5
+            },
+            4: {
+                title: "Product Detail",
+                content: "<p>Technical jargon (Niacinamide, AHA/BHA) is presented without layman's explanations. The 'How to Use' section is a long block of text rather than a visual guide.</p><div class='p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/20'><span class='font-bold text-xs uppercase text-primary block mb-1 font-label-caps'>UX Friction Log:</span><p class='text-sm italic'>\"I've heard of AHA but I'm scared it will burn. There's no clear info here on how strong this actually is.\"</p></div>",
+                severity: 3
+            }
+        };
+
+        function showNodeDetails(nodeId) {
+            // Update nodes styling
+            document.querySelectorAll('[id^="node-"]').forEach(el => {
+                el.classList.remove('active-node');
+                const iconContainer = el.querySelector('div:first-child');
+                iconContainer.classList.remove('bg-primary', 'text-on-primary');
+                iconContainer.classList.add('bg-primary-fixed', 'text-primary');
+            });
+            
+            const activeNode = document.getElementById(`node-${nodeId}`);
+            activeNode.classList.add('active-node');
+            const iconContainer = activeNode.querySelector('div:first-child');
+            iconContainer.classList.remove('bg-primary-fixed', 'text-primary');
+            iconContainer.classList.add('bg-primary', 'text-on-primary');
+
+            // Update details panel
+            const data = nodeData[nodeId];
+            document.getElementById('detail-title').innerText = data.title;
+            document.getElementById('detail-content').innerHTML = data.content;
+            
+            // Update severity circles
+            const severityContainer = document.querySelector('#details-container .flex.gap-1');
+            severityContainer.innerHTML = '';
+            for (let i = 0; i < 5; i++) {
+                const circle = document.createElement('div');
+                circle.className = `w-4 h-4 rounded-full ${i < data.severity ? 'bg-primary' : 'bg-primary/20'}`;
+                severityContainer.appendChild(circle);
+            }
+
+            // Animate panel update
+            const container = document.getElementById('details-container');
+            container.style.opacity = '0.5';
+            container.style.transform = 'translateY(4px)';
+            setTimeout(() => {
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 50);
+        }
+    </script>
+</body></html>

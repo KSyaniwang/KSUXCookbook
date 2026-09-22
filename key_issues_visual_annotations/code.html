@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Key Issues &amp; Severity | Korean Skincare UX Research</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .editorial-shadow {
+            box-shadow: 0 10px 30px -10px rgba(172, 93, 137, 0.15);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fff8f8;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#ffa4d4",
+                        "outline": "#84737a",
+                        "tertiary-fixed-dim": "#a0d585",
+                        "surface-dim": "#e5d6db",
+                        "on-secondary-fixed": "#2e1222",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#062100",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffd8e9",
+                        "surface-container": "#f9eaef",
+                        "surface": "#fff8f8",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#245110",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#8f4570",
+                        "on-surface": "#211a1d",
+                        "tertiary-container": "#9ace7f",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffafd8",
+                        "on-secondary-container": "#7b5668",
+                        "surface-container-low": "#fff0f4",
+                        "on-primary-fixed-variant": "#732d57",
+                        "secondary-fixed-dim": "#e8bacf",
+                        "tertiary": "#3b6927",
+                        "inverse-on-surface": "#fcedf1",
+                        "on-primary-fixed": "#3c0029",
+                        "surface-tint": "#8f4570",
+                        "on-surface-variant": "#514349",
+                        "surface-variant": "#eddfe3",
+                        "background": "#fff8f8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#f3e4e9",
+                        "on-tertiary-container": "#2b5818",
+                        "on-secondary-fixed-variant": "#5e3d4e",
+                        "inverse-surface": "#362e32",
+                        "on-primary-container": "#7c355f",
+                        "surface-container-highest": "#eddfe3",
+                        "secondary": "#785466",
+                        "tertiary-fixed": "#bcf19f",
+                        "on-background": "#211a1d",
+                        "secondary-fixed": "#ffd8e9",
+                        "secondary-container": "#ffd0e5",
+                        "surface-bright": "#fff8f8",
+                        "outline-variant": "#d6c1c9",
+                        "inverse-primary": "#ffafd8",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<div class="font-display text-2xl font-bold text-on-surface tracking-tighter">
+            Korean Skincare
+        </div>
+<nav class="hidden md:flex space-x-8">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Context</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Strategy</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Audit</a>
+<a class="font-label-caps text-label-caps uppercase text-primary font-bold border-b-2 border-primary pb-1" href="#">Issues</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Proposed</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Validation</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Plan</a>
+</nav>
+<div class="flex items-center">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:bg-primary/90 transition-all">Contact</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<section class="mb-16">
+<div class="inline-flex items-center px-3 py-1 bg-primary-container/20 text-on-primary-container rounded-full mb-6">
+<span class="material-symbols-outlined text-[18px] mr-2 text-primary">analytics</span>
+<span class="font-label-caps text-label-caps uppercase">UX Research Synthesis</span>
+</div>
+<h1 class="font-display text-display text-on-surface mb-4">Key Issues &amp; Severity</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Analysis of critical friction points identified during the Korean Skincare interface audit. These findings inform our prioritization strategy.
+        </p>
+</section>
+<!-- Main Content: Side-by-Side Cards -->
+<div class="space-y-6">
+<!-- Issue 1 -->
+<div class="group flex flex-col lg:flex-row bg-surface-container-low rounded-2xl overflow-hidden editorial-shadow border border-outline-variant/30 transition-transform hover:scale-[1.01]">
+<div class="lg:w-1/3 bg-surface-container-high border-b lg:border-b-0 lg:border-r border-outline-variant/20 overflow-hidden flex flex-col">
+<div class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold">High Severity</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Inconsistent Filtering</h3>
+</div>
+<div class="flex-1 relative min-h-[200px] overflow-hidden">
+<img alt="Filtering Interface" class="absolute inset-0 w-full h-full object-cover object-top" src="../assets/journey/04-product-listing.png"/>
+</div>
+</div>
+<div class="lg:flex-1 p-8 flex items-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Filtering does not feel equally available across browsing and search. This creates friction for users who already know what they want and need to narrow products quickly.
+                </p>
+</div>
+</div>
+<!-- Issue 2 -->
+<div class="group flex flex-col lg:flex-row bg-surface-container-low rounded-2xl overflow-hidden editorial-shadow border border-outline-variant/30 transition-transform hover:scale-[1.01]">
+<div class="lg:w-1/3 bg-surface-container-high border-b lg:border-b-0 lg:border-r border-outline-variant/20 overflow-hidden flex flex-col">
+<div class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold">High Severity</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Weak Product Card Cues</h3>
+</div>
+<div class="flex-1 relative min-h-[200px] overflow-hidden">
+<img alt="Product Cards" class="absolute inset-0 w-full h-full object-cover object-center" src="../assets/journey/04-product-listing.png"/>
+</div>
+</div>
+<div class="lg:flex-1 p-8 flex items-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Product cards do not provide enough decision-making information. Users may need to open many product pages before understanding which product is relevant.
+                </p>
+</div>
+</div>
+<!-- Issue 3 -->
+<div class="group flex flex-col lg:flex-row bg-surface-container-low rounded-2xl overflow-hidden editorial-shadow border border-outline-variant/30 transition-transform hover:scale-[1.01]">
+<div class="lg:w-1/3 bg-surface-container-high border-b lg:border-b-0 lg:border-r border-outline-variant/20 overflow-hidden flex flex-col">
+<div class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Medium Severity</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Promotion-Led Discovery</h3>
+</div>
+<div class="flex-1 relative min-h-[200px] overflow-hidden">
+<img alt="Promotion Banner" class="absolute inset-0 w-full h-full object-cover object-top" src="../assets/journey/01-homepage.png"/>
+</div>
+</div>
+<div class="lg:flex-1 p-8 flex items-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    The discovery experience is strongly driven by banners and campaigns. This may reduce the feeling of personalized skincare guidance.
+                </p>
+</div>
+</div>
+<!-- Issue 4 -->
+<div class="group flex flex-col lg:flex-row bg-surface-container-low rounded-2xl overflow-hidden editorial-shadow border border-outline-variant/30 transition-transform hover:scale-[1.01]">
+<div class="lg:w-1/3 bg-surface-container-high border-b lg:border-b-0 lg:border-r border-outline-variant/20 overflow-hidden flex flex-col">
+<div class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold">High Severity</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Limited Skin Concern Guidance</h3>
+</div>
+<div class="flex-1 relative min-h-[200px] overflow-hidden">
+<img alt="Skin Concerns" class="absolute inset-0 w-full h-full object-cover object-center" src="../assets/journey/02-collections.png"/>
+</div>
+</div>
+<div class="lg:flex-1 p-8 flex items-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Skincare shopping depends on personal needs such as acne, dryness, sensitivity, anti-aging, or barrier repair. Without clear skin concern guidance, users may feel unsure.
+                </p>
+</div>
+</div>
+<!-- Issue 5 -->
+<div class="group flex flex-col lg:flex-row bg-surface-container-low rounded-2xl overflow-hidden editorial-shadow border border-outline-variant/30 transition-transform hover:scale-[1.01]">
+<div class="lg:w-1/3 bg-surface-container-high border-b lg:border-b-0 lg:border-r border-outline-variant/20 overflow-hidden flex flex-col">
+<div class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Medium Severity</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Hard to Compare Products</h3>
+</div>
+<div class="flex-1 relative min-h-[200px] overflow-hidden">
+<img alt="Product Comparison" class="absolute inset-0 w-full h-full object-cover object-bottom" src="../assets/journey/05-product-detail.png"/>
+</div>
+</div>
+<div class="lg:flex-1 p-8 flex items-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    When product information is not easy to scan, users need more effort to compare options. This can slow down decision-making and reduce confidence.
+                </p>
+</div>
+</div>
+</div>
+<!-- Severity Legend & Insight -->
+<section class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 flex flex-col md:flex-row gap-10 p-10 bg-surface-container-lowest rounded-2xl border border-outline-variant/20">
+<div class="max-w-xs">
+<h5 class="font-label-caps text-label-caps text-primary uppercase mb-3">Severity Rating Guide</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Prioritizing technical sprints based on user impact levels.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<div class="w-3 h-3 rounded-full bg-primary mt-2"></div>
+<div>
+<span class="font-bold text-on-surface">High Severity</span>
+<p class="text-sm text-on-surface-variant">Blocks the user or causes significant confusion.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-3 h-3 rounded-full bg-secondary mt-2"></div>
+<div>
+<span class="font-bold text-on-surface">Medium Severity</span>
+<p class="text-sm text-on-surface-variant">Creates minor friction but is non-blocking.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary-container/20 rounded-2xl p-8 flex flex-col justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">lightbulb</span>
+<h4 class="font-headline-md text-headline-md text-on-primary-container mb-2">Key Takeaway</h4>
+<p class="font-body-md text-body-md text-on-primary-container/80">
+                High severity issues indicate a need for a structured, guidance-first navigation model.
+            </p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full border-t border-outline-variant mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto py-12">
+<div class="font-display text-2xl font-bold text-on-surface-variant mb-6 md:mb-0">
+            Korean Skincare
+        </div>
+<div class="flex flex-col items-center md:items-end">
+<div class="flex space-x-6 mb-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4" href="#">About Me</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4" href="#">Portfolio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4" href="#">LinkedIn</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60 text-center">
+                © 2026 Korean Skincare UX Research. All rights reserved.
+            </p>
+</div>
+</div>
+</footer>
+</body></html>
