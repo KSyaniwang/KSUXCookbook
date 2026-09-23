@@ -114,19 +114,13 @@ if (form) {
             time.dateTime = entry.created_at;
             top.append(title, time);
 
-            const meta = createElement('div', 'history-entry__meta');
-            meta.append(createElement('span', '', entry.business_goal));
-
             const detail = createElement('div', 'history-entry__detail');
-            detail.append(createElement('p', '', `Severity reason: ${entry.severity_reason}`));
+            detail.append(createElement('p', '', `Suggested resolution: ${entry.severity_reason}`));
             if (entry.quotation) {
-                detail.append(createElement('p', '', `Example quotation: ${entry.quotation}`));
-            }
-            if (entry.user_goal) {
-                detail.append(createElement('p', '', `User goal: ${entry.user_goal}`));
+                detail.append(createElement('p', '', `Evidence / context: ${entry.quotation}`));
             }
 
-            article.append(top, meta, detail);
+            article.append(top, detail);
 
             if (entry.files?.length) {
                 const files = createElement('div', 'history-entry__files');
@@ -293,12 +287,12 @@ if (form) {
             id: insightId,
             created_by: uploadUser.id,
             issue: data.get('issue').trim(),
-            business_goal: data.get('businessGoal'),
+            business_goal: 'Not captured',
             frequency: 'Not captured',
             severity: 'Not captured',
-            severity_reason: data.get('severityReason').trim(),
-            quotation: data.get('quotation').trim(),
-            user_goal: data.get('userGoal').trim(),
+            severity_reason: data.get('suggestion').trim() || 'No suggestion provided',
+            quotation: data.get('evidenceContext').trim(),
+            user_goal: '',
             files: uploadedFiles
         };
         const { error } = await supabase
@@ -329,21 +323,17 @@ if (form) {
     exportButton.addEventListener('click', () => {
         const columns = [
             'Date',
-            'Question or complaint',
-            'Business goal',
-            'Severity reason',
-            'Example quotations',
-            'User goals',
+            'Complaint or issue',
+            'Suggested resolution',
+            'Evidence / context',
             'Files'
         ];
         const escapeCell = value => `"${String(value ?? '').replaceAll('"', '""')}"`;
         const rows = entries.map(entry => [
             entry.created_at,
             entry.issue,
-            entry.business_goal,
             entry.severity_reason,
             entry.quotation,
-            entry.user_goal,
             (entry.files || []).map(file => file.name).join('; ')
         ]);
         const csv = [columns, ...rows]

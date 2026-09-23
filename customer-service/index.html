@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&amp;family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link href="../css/design-tokens.css" rel="stylesheet"/>
-    <link href="../css/customer-service.css" rel="stylesheet"/>
+    <link href="../css/customer-service.css?v=20260923-1" rel="stylesheet"/>
 </head>
 <body class="cs-page">
     <header class="cs-header">
@@ -23,7 +23,7 @@
     <main>
         <section class="cs-hero" aria-labelledby="cs-title">
             <h1 id="cs-title">Customer Service × UX</h1>
-            <p>Customer Service hears where the experience breaks first. A consistent feedback loop helps UX turn repeated complaints, customer language, and severity signals into better product decisions.</p>
+            <p>Customer Service hears where the experience breaks first. A simple feedback loop helps UX turn complaints, suggested resolutions, and supporting context into better product decisions.</p>
         </section>
 
         <section class="cs-section meeting-section" aria-labelledby="meeting-title">
@@ -32,7 +32,7 @@
                 <span class="material-symbols-outlined" aria-hidden="true">event_repeat</span>
                 <div class="meeting-card__copy">
                     <h3>Bi-weekly check-in</h3>
-                    <p>Recurring questions, complaint frequency, customer impact, and supporting evidence.</p>
+                    <p>Customer complaints, suggested resolutions, and optional supporting evidence.</p>
                 </div>
                 <div class="meeting-card__meta">
                     <span>Every two weeks</span>
@@ -58,47 +58,43 @@
                     <span>Website</span>
                     <input name="website" type="text" tabindex="-1" autocomplete="off"/>
                 </label>
-                <div class="form-grid">
+                <div class="form-grid form-grid--intake">
                     <label>
-                        <span>Question or complaint</span>
-                        <input name="issue" type="text" required placeholder="e.g. Wishlist disappeared after login"/>
+                        <span>Complaint or issue</span>
+                        <textarea name="issue" rows="5" required placeholder="What did the customer experience?"></textarea>
                     </label>
                     <label>
-                        <span>Business goal</span>
-                        <select name="businessGoal" required>
-                            <option value="">Select an area</option>
-                            <option>Search / discovery</option>
-                            <option>Promotions</option>
-                            <option>Account / login</option>
-                            <option>Checkout / payment</option>
-                            <option>Shipping</option>
-                            <option>Returns / refunds</option>
-                            <option>Product usage</option>
-                            <option>Repeat purchase</option>
-                        </select>
+                        <span>Suggested resolution <small>Optional</small></span>
+                        <textarea name="suggestion" rows="5" placeholder="How could the experience be improved?"></textarea>
                     </label>
                 </div>
 
-                <label>
-                    <span>Severity reason</span>
-                    <textarea name="severityReason" rows="3" required placeholder="Why does this severity make sense?"></textarea>
-                </label>
-                <label>
-                    <span>Example quotations / notes</span>
-                    <textarea name="quotation" rows="3" placeholder="Paste customer questions or quotations"></textarea>
-                </label>
-                <label>
-                    <span>User goals / expected behaviour</span>
-                    <textarea name="userGoal" rows="3" placeholder="What was the customer trying to achieve?"></textarea>
-                </label>
+                <section class="evidence-upload" aria-labelledby="evidence-upload-title">
+                    <div class="evidence-upload__heading">
+                        <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+                        <div>
+                            <h3 id="evidence-upload-title">Supporting evidence <small>Optional</small></h3>
+                            <p>Add what you already have. UX can use it to verify the complaint without slowing down CS.</p>
+                        </div>
+                    </div>
+                    <div class="evidence-upload__grid">
+                        <label class="evidence-context">
+                            <span>Customer quote or ticket link</span>
+                            <textarea name="evidenceContext" rows="4" placeholder="Paste the customer’s exact words or a support ticket URL"></textarea>
+                        </label>
 
-                <label class="file-drop" data-file-drop>
-                    <input name="files" type="file" multiple accept=".png,.jpg,.jpeg,.webp,.gif,.heic,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.csv"/>
-                    <span class="material-symbols-outlined" aria-hidden="true">upload_file</span>
-                    <strong>Upload example quotations, documents, or screenshots</strong>
-                    <small>Select multiple images, PDFs, documents, spreadsheets, presentations, or text files</small>
-                    <span class="file-selection" data-file-selection>No files selected</span>
-                </label>
+                        <label class="file-drop" data-file-drop>
+                            <input name="files" type="file" multiple accept=".png,.jpg,.jpeg,.webp,.gif,.heic,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.csv"/>
+                            <span class="file-drop__icon material-symbols-outlined" aria-hidden="true">add_photo_alternate</span>
+                            <div>
+                                <strong>Add screenshots or files</strong>
+                                <small>Images, PDFs, documents, spreadsheets, presentations, or text files</small>
+                            </div>
+                            <span class="file-drop__action">Choose files</span>
+                            <span class="file-selection" data-file-selection>No files selected</span>
+                        </label>
+                    </div>
+                </section>
 
                 <div class="form-actions">
                     <p data-form-status aria-live="polite"></p>
@@ -231,6 +227,6 @@
         <span>Customer Service × UX</span>
     </footer>
 
-    <script type="module" src="../js/customer-service.js"></script>
+    <script type="module" src="../js/customer-service.js?v=20260923-1"></script>
 </body>
 </html>
