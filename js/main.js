@@ -580,44 +580,56 @@ const designSystemPanels = {
                 <div class="ds-spec__block">
                     <div class="ds-spec__block-head">
                         <p class="ds-spec__block-title">Type scale</p>
-                        <p class="ds-spec__block-note">Plus Jakarta Sans · prototype screens</p>
+                        <p class="ds-spec__block-note">Domine headings · Poppins interface and body</p>
                     </div>
                     <div class="ds-spec__block-body">
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample" style="font-size:20px;line-height:28px;font-weight:700;">Skin Concerns</span>
-                            <div class="ds-spec-type__meta"><strong>title-lg</strong><code>20px / 28px / 700</code></div>
+                            <span class="ds-spec-type__sample type-h1">Discover Korean skincare</span>
+                            <div class="ds-spec-type__meta"><strong>heading.H1</strong><code>Domine · 56px / 64px / 500 · −1%</code></div>
                         </div>
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample" style="font-size:16px;line-height:24px;font-weight:700;">Final Price €18.55</span>
-                            <div class="ds-spec-type__meta"><strong>title-md</strong><code>16px / 24px / 700</code></div>
+                            <span class="ds-spec-type__sample type-h2">Shop by skin concern</span>
+                            <div class="ds-spec-type__meta"><strong>heading.H2</strong><code>Domine · 40px / 48px / 500 · −0.5%</code></div>
                         </div>
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample" style="font-size:15px;line-height:20px;font-weight:500;">Purchase the products you saved during the session.</span>
-                            <div class="ds-spec-type__meta"><strong>body-lg</strong><code>15px / 20px / 500</code></div>
+                            <span class="ds-spec-type__sample type-h3">Build your routine</span>
+                            <div class="ds-spec-type__meta"><strong>heading.H3</strong><code>Domine · 32px / 40px / 500</code></div>
                         </div>
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample" style="font-size:14px;line-height:20px;font-weight:600;">Madagascar Centella Light Cleansing Oil</span>
-                            <div class="ds-spec-type__meta"><strong>body-md-semibold</strong><code>14px / 20px / 600</code></div>
+                            <span class="ds-spec-type__sample type-subtitle">Madagascar Centella</span>
+                            <div class="ds-spec-type__meta"><strong>subtitle.poppins</strong><code>Poppins · 24px / 32px / 500</code></div>
                         </div>
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample ds-spec-type__sample--muted" style="font-size:14px;line-height:20px;font-weight:500;">Cart Total</span>
-                            <div class="ds-spec-type__meta"><strong>body-md</strong><code>14px / 20px / 500</code><code>color #6b7280</code></div>
+                            <span class="ds-spec-type__sample type-subtitle-domine">Editorial collection</span>
+                            <div class="ds-spec-type__meta"><strong>subtitle.domine</strong><code>Domine · 24px / 32px / 500</code></div>
                         </div>
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample ds-spec-type__sample--brand" style="font-size:14px;line-height:20px;font-weight:500;">€6.35</span>
-                            <div class="ds-spec-type__meta"><strong>body-md-accent</strong><code>14px / 20px / 500</code><code>color #8f4570</code></div>
+                            <span class="ds-spec-type__sample type-body-lg">Introductory copy for important product guidance.</span>
+                            <div class="ds-spec-type__meta"><strong>body.lg</strong><code>Poppins · 18px / 24px / 400</code></div>
                         </div>
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample ds-spec-type__sample--strike" style="font-size:14px;line-height:20px;font-weight:400;">€24.90</span>
-                            <div class="ds-spec-type__meta"><strong>body-md-muted</strong><code>14px / 20px / 400</code><code>color #9ca3af</code></div>
+                            <span class="ds-spec-type__sample type-body-md">Default body copy for descriptions and guidance.</span>
+                            <div class="ds-spec-type__meta"><strong>body.md</strong><code>Poppins · 16px / 22px / 400</code></div>
                         </div>
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample" style="font-size:12px;line-height:16px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">Sort</span>
-                            <div class="ds-spec-type__meta"><strong>label-sm</strong><code>12px / 16px / 700</code><code>uppercase +1.2px</code></div>
+                            <span class="ds-spec-type__sample type-body-sm">Compact list and supporting copy.</span>
+                            <div class="ds-spec-type__meta"><strong>body.sm</strong><code>Poppins · 14px / 20px / 400</code></div>
                         </div>
                         <div class="ds-spec-type">
-                            <span class="ds-spec-type__sample" style="font-size:10px;line-height:15px;font-weight:500;color:#111827;">Cart</span>
-                            <div class="ds-spec-type__meta"><strong>label-xs</strong><code>10px / 15px / 500</code><code>inactive #a5abb0</code></div>
+                            <span class="ds-spec-type__sample type-caption-lg">Additional product information</span>
+                            <div class="ds-spec-type__meta"><strong>caption.lg</strong><code>Poppins · 12px / 16px / 400</code></div>
+                        </div>
+                        <div class="ds-spec-type">
+                            <span class="ds-spec-type__sample type-caption-md">Button, label, chip</span>
+                            <div class="ds-spec-type__meta"><strong>caption.md</strong><code>Poppins · 10px / 14px / 400</code></div>
+                        </div>
+                        <div class="ds-spec-type">
+                            <span class="ds-spec-type__sample type-caption-sm">INCI, disclaimer, footnote</span>
+                            <div class="ds-spec-type__meta"><strong>caption.sm</strong><code>Poppins · 8px / 12px / 400</code></div>
+                        </div>
+                        <div class="ds-spec-type">
+                            <span class="ds-spec-type__sample type-button">Add to cart</span>
+                            <div class="ds-spec-type__meta"><strong>visual.btn</strong><code>Poppins · 16px / 24px / 700 · +.05em · uppercase</code></div>
                         </div>
                     </div>
                 </div>
@@ -785,38 +797,38 @@ const designSystemPanels = {
                     <div class="ds-color-spec">
                         <div class="ds-color-spec__head">
                             <p class="ds-color-spec__title">Brand</p>
-                            <p class="ds-color-spec__note">Accent + highlights</p>
+                            <p class="ds-color-spec__note">brand.json · pink scale</p>
                         </div>
                         <div class="ds-color-spec__body">
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip" style="background:var(--token-primary);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>primary</strong>
-                                    <code>--token-primary</code>
+                                    <strong>pink.500</strong>
+                                    <code>#FF76A1</code>
                                     <span>Discount, heart icon, guide labels</span>
                                 </div>
                             </div>
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip" style="background:var(--token-primary-container);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>primary-container</strong>
-                                    <code>--token-primary-container</code>
+                                    <strong>pink.300</strong>
+                                    <code>#FFADC7</code>
                                     <span>Card icon backgrounds</span>
                                 </div>
                             </div>
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip" style="background:var(--token-secondary-container);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>secondary-container</strong>
-                                    <code>--token-secondary-container</code>
+                                    <strong>pink.200</strong>
+                                    <code>#FFC8D9</code>
                                     <span>Spec panel accents</span>
                                 </div>
                             </div>
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip" style="background:var(--token-badge-pink);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>badge-pink</strong>
-                                    <code>--token-badge-pink</code>
+                                    <strong>pink.100</strong>
+                                    <code>#FFE4EC</code>
                                     <span>Cart tab badge</span>
                                 </div>
                             </div>
@@ -832,32 +844,32 @@ const designSystemPanels = {
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip ds-color-swatch__chip--border" style="background:var(--token-surface-card);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>surface-card</strong>
-                                    <code>--token-surface-card</code>
+                                    <strong>white.100</strong>
+                                    <code>#fff</code>
                                     <span>Cards, tab bar, inputs</span>
                                 </div>
                             </div>
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip ds-color-swatch__chip--border" style="background:var(--token-surface);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>surface</strong>
-                                    <code>--token-surface</code>
+                                    <strong>pink.cloudpink</strong>
+                                    <code>#FFF3F9</code>
                                     <span>Case study + app base</span>
                                 </div>
                             </div>
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip ds-color-swatch__chip--border" style="background:var(--token-surface-low);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>surface-low</strong>
-                                    <code>--token-surface-low</code>
+                                    <strong>pink.100</strong>
+                                    <code>#FFE4EC</code>
                                     <span>Guide card, wishlist circle</span>
                                 </div>
                             </div>
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip" style="background:var(--token-surface-muted);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>surface-muted</strong>
-                                    <code>--token-surface-muted</code>
+                                    <strong>grey.050</strong>
+                                    <code>#F3F3F3</code>
                                     <span>Muted screen backgrounds</span>
                                 </div>
                             </div>
@@ -875,24 +887,24 @@ const designSystemPanels = {
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip" style="background:var(--token-text-ui-primary);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>text-primary</strong>
-                                    <code>--token-text-ui-primary</code>
+                                    <strong>txt.primary</strong>
+                                    <code>grey.1000 · #0E0F0C</code>
                                     <span>Titles, prices, active nav</span>
                                 </div>
                             </div>
                             <div class="ds-color-swatch">
                                 <span class="ds-color-swatch__chip" style="background:var(--token-text-ui-secondary);"></span>
                                 <div class="ds-color-swatch__meta">
-                                    <strong>text-secondary</strong>
-                                    <code>--token-text-ui-secondary</code>
+                                    <strong>txt.default</strong>
+                                    <code>grey.600 · #6E6F6D</code>
                                     <span>Summary labels, hints</span>
                                 </div>
                             </div>
                             <div class="ds-color-swatch">
-                                <span class="ds-color-swatch__chip" style="background:#9ca3af;"></span>
+                                <span class="ds-color-swatch__chip" style="background:var(--color-grey-400);"></span>
                                 <div class="ds-color-swatch__meta">
                                     <strong>text-muted</strong>
-                                    <code>#9ca3af</code>
+                                    <code>var(--color-grey-400)</code>
                                     <span>Size, struck through price</span>
                                 </div>
                             </div>
@@ -953,7 +965,7 @@ const designSystemPanels = {
                     <div class="ds-color-spec">
                         <div class="ds-color-spec__head">
                             <p class="ds-color-spec__title">Annotation</p>
-                            <p class="ds-color-spec__note">Purple markers + callouts</p>
+                            <p class="ds-color-spec__note">Pink markers + callouts</p>
                         </div>
                         <div class="ds-color-spec__body">
                             <div class="ds-color-swatch">
@@ -997,7 +1009,7 @@ const designSystemPanels = {
                     <div class="ds-color-usage__row">
                         <span class="ds-color-usage__chip" style="background:var(--token-annotation);">annotation</span>
                         <span class="ds-color-usage__arrow" aria-hidden="true">→</span>
-                        <span class="ds-color-usage__text">Purple numbered markers, audit labels, and change callouts</span>
+                        <span class="ds-color-usage__text">Pink numbered markers, audit labels, and change callouts</span>
                     </div>
                     <div class="ds-color-usage__row">
                         <span class="ds-color-usage__chip ds-color-usage__chip--dark">action-primary</span>
@@ -1007,7 +1019,7 @@ const designSystemPanels = {
                     <div class="ds-color-usage__row">
                         <span class="ds-color-usage__chip ds-color-usage__chip--light">annotation-surface</span>
                         <span class="ds-color-usage__arrow" aria-hidden="true">→</span>
-                        <span class="ds-color-usage__text">Soft purple surfaces behind guide and change content</span>
+                        <span class="ds-color-usage__text">Soft pink surfaces behind guide and change content</span>
                     </div>
                 </div>
             </div>

@@ -3,66 +3,66 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>korean skincare UX Case Study</title>
+    <title>UX COOKBOOK | Korean Skincare</title>
     <base data-site-base href="./"/>
-    <script src="./js/site-paths.js"></script>
+    <script src="./js/site-paths.js?v=20260923-1"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&amp;family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="./css/main.css" rel="stylesheet"/>
+    <link href="./css/main.css?v=20260923-1" rel="stylesheet"/>
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        surface: "#fff8f8",
-                        "surface-dim": "#e5d6db",
-                        "surface-bright": "#fff8f8",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-low": "#fff0f4",
-                        "surface-container": "#f9eaef",
-                        "surface-container-high": "#f3e4e9",
-                        "surface-container-highest": "#eddfe3",
-                        "on-surface": "#211a1d",
-                        "on-surface-variant": "#514349",
-                        "inverse-surface": "#362e32",
-                        "inverse-on-surface": "#fcedf1",
-                        outline: "#84737a",
-                        "outline-variant": "#d6c1c9",
-                        "surface-tint": "#8f4570",
-                        primary: "#8f4570",
-                        "on-primary": "#ffffff",
-                        "primary-container": "#ffa4d4",
-                        "on-primary-container": "#7c355f",
-                        "inverse-primary": "#ffafd8",
-                        secondary: "#785466",
-                        "on-secondary": "#ffffff",
-                        "secondary-container": "#ffd0e5",
-                        "on-secondary-container": "#7b5668",
-                        tertiary: "#3b6927",
-                        "on-tertiary": "#ffffff",
-                        "tertiary-container": "#9ace7f",
-                        "on-tertiary-container": "#2b5818",
-                        error: "#ba1a1a",
-                        "on-error": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "on-error-container": "#93000a",
-                        "primary-fixed": "#ffd8e9",
-                        "primary-fixed-dim": "#ffafd8",
-                        "on-primary-fixed": "#3c0029",
-                        "on-primary-fixed-variant": "#732d57",
-                        "secondary-fixed": "#ffd8e9",
-                        "secondary-fixed-dim": "#e8bacf",
-                        "on-secondary-fixed": "#2e1222",
-                        "on-secondary-fixed-variant": "#5e3d4e",
-                        "tertiary-fixed": "#bcf19f",
-                        "tertiary-fixed-dim": "#a0d585",
-                        "on-tertiary-fixed": "#062100",
-                        "on-tertiary-fixed-variant": "#245110",
-                        background: "#fff8f8",
-                        "on-background": "#211a1d",
-                        "surface-variant": "#eddfe3"
+                        surface: "var(--color-pink-cloud)",
+                        "surface-dim": "var(--color-pink-200)",
+                        "surface-bright": "var(--color-pink-cloud)",
+                        "surface-container-lowest": "var(--color-white)",
+                        "surface-container-low": "var(--color-pink-cloud)",
+                        "surface-container": "var(--color-pink-100)",
+                        "surface-container-high": "var(--color-pink-100)",
+                        "surface-container-highest": "var(--color-pink-100)",
+                        "on-surface": "var(--color-text-primary)",
+                        "on-surface-variant": "var(--color-text-default)",
+                        "inverse-surface": "var(--color-grey-800)",
+                        "inverse-on-surface": "var(--color-pink-cloud)",
+                        outline: "var(--color-grey-500)",
+                        "outline-variant": "var(--color-border-primary)",
+                        "surface-tint": "var(--color-pink-500)",
+                        primary: "var(--color-pink-500)",
+                        "on-primary": "var(--color-white)",
+                        "primary-container": "var(--color-pink-300)",
+                        "on-primary-container": "var(--color-text-primary)",
+                        "inverse-primary": "var(--color-pink-300)",
+                        secondary: "var(--color-text-default)",
+                        "on-secondary": "var(--color-white)",
+                        "secondary-container": "var(--color-pink-200)",
+                        "on-secondary-container": "var(--color-text-default)",
+                        tertiary: "var(--color-signal-green-500)",
+                        "on-tertiary": "var(--color-white)",
+                        "tertiary-container": "var(--color-signal-green-300)",
+                        "on-tertiary-container": "var(--color-signal-green-500)",
+                        error: "var(--color-signal-red-500)",
+                        "on-error": "var(--color-white)",
+                        "error-container": "var(--color-pink-100)",
+                        "on-error-container": "var(--color-signal-red-500)",
+                        "primary-fixed": "var(--color-pink-200)",
+                        "primary-fixed-dim": "var(--color-pink-300)",
+                        "on-primary-fixed": "var(--color-text-primary)",
+                        "on-primary-fixed-variant": "var(--color-text-default)",
+                        "secondary-fixed": "var(--color-pink-200)",
+                        "secondary-fixed-dim": "var(--color-pink-200)",
+                        "on-secondary-fixed": "var(--color-text-primary)",
+                        "on-secondary-fixed-variant": "var(--color-text-default)",
+                        "tertiary-fixed": "var(--color-signal-green-300)",
+                        "tertiary-fixed-dim": "var(--color-signal-green-300)",
+                        "on-tertiary-fixed": "var(--color-signal-green-500)",
+                        "on-tertiary-fixed-variant": "var(--color-signal-green-500)",
+                        background: "var(--color-pink-cloud)",
+                        "on-background": "var(--color-text-primary)",
+                        "surface-variant": "var(--color-pink-100)"
                     },
                     borderRadius: {
                         DEFAULT: "0.125rem",
@@ -81,818 +81,695 @@
                         "stack-lg": "64px"
                     },
                     fontFamily: {
-                        display: ["Plus Jakarta Sans"],
-                        "headline-lg": ["Plus Jakarta Sans"],
-                        "headline-lg-mobile": ["Plus Jakarta Sans"],
-                        "headline-md": ["Plus Jakarta Sans"],
-                        "body-lg": ["Plus Jakarta Sans"],
-                        "body-md": ["Plus Jakarta Sans"],
-                        "label-caps": ["Plus Jakarta Sans"]
+                        display: ["Domine", "serif"],
+                        "headline-lg": ["Domine", "serif"],
+                        "headline-lg-mobile": ["Domine", "serif"],
+                        "headline-md": ["Domine", "serif"],
+                        "body-lg": ["Poppins", "sans-serif"],
+                        "body-md": ["Poppins", "sans-serif"],
+                        "label-caps": ["Poppins", "sans-serif"]
                     },
                     fontSize: {
-                        display: ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
-                        "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
-                        "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "600" }],
-                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
-                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-                        caption: ["12px", { lineHeight: "1.4", fontWeight: "400" }],
-                        "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600" }]
+                        display: ["56px", { lineHeight: "64px", letterSpacing: "-0.01em", fontWeight: "500" }],
+                        "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.005em", fontWeight: "500" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "0", fontWeight: "500" }],
+                        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "0", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "24px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "22px", fontWeight: "400" }],
+                        caption: ["12px", { lineHeight: "16px", fontWeight: "400" }],
+                        "label-caps": ["10px", { lineHeight: "14px", letterSpacing: "0", fontWeight: "400" }]
                     }
                 }
             }
         };
     </script>
+<link href="./css/design-tokens.css?v=20260923-1" rel="stylesheet"/>
+<link href="./css/home.css?v=20260923-9" rel="stylesheet"/>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container font-body-md overflow-x-hidden">
 
-<!-- Scroll Progress -->
-<div id="scroll-progress-bar"></div>
-
 <!-- Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md">
-    <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
-        <a href="#home" class="font-display text-2xl md:text-3xl text-on-surface tracking-tighter hover:text-primary transition-colors brand-mark">korean skincare</a>
+    <div class="ks-site-nav">
+        <a href="#home" class="ks-logo-link" aria-label="Korean Skincare home" data-node-id="2009:31330">
+            <img src="./assets/logos/korean-skincare-figma.svg" alt="Korean Skincare" data-node-id="2009:31240"/>
+        </a>
+        <div class="ks-header-links" aria-label="Homepage links">
+            <a href="./articles/">My articles</a>
+            <a href="./useful-links/">Useful links</a>
+        </div>
     </div>
 </nav>
 
 <!-- ==================== HOME ==================== -->
 <section id="home" class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
     <header class="text-center mb-16 space-y-4 fade-in">
-        <h1 class="font-display text-display md:text-[56px] text-on-surface leading-tight max-w-4xl mx-auto"><span class="brand-mark">korean skincare</span> UX Review.</h1>
-        <p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed max-w-2xl mx-auto">
-            A UX review and redesign for the product discovery flow.
+        <h1 class="font-display text-display text-on-surface max-w-4xl mx-auto">UX COOKBOOK</h1>
+        <p class="text-on-surface-variant font-body-lg text-body-lg max-w-4xl mx-auto">
+            This cookbook is the survival guide for how different departments can team up with UX to craft a killer product experience. In the competitive skincare market, better UX helps us achieve our OKRs and build lasting customer loyalty.
         </p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        <a href="#ux-review" class="group bg-surface-container-lowest rounded-xl p-8 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow fade-in">
+    <div id="articles" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-gutter">
+        <a href="./marketing/" class="department-card group bg-surface-container-lowest rounded-xl p-6 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow fade-in">
             <div class="flex items-center justify-between mb-8">
-                <span class="font-display text-4xl text-primary/20">01</span>
-                <div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
-                    <span class="material-symbols-outlined">analytics</span>
+                <span class="department-card__number type-h3 text-primary/20">01</span>
+                <div class="department-card__icon">
+                    <span class="material-symbols-outlined">campaign</span>
                 </div>
             </div>
-            <h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">UX Review</h2>
-            <p class="text-on-surface-variant flex-grow font-body-md">
-                Analysis of the current business context, target users, competitive benchmarks, and the rationale behind selecting the discovery flow.
+            <h2 class="department-card__title type-subtitle-domine mb-4 transition-colors">Marketing</h2>
+            <p class="department-card__copy text-on-surface-variant flex-grow font-body-sm text-body-sm">
+                Connect campaigns, content, and growth goals with real user needs so every touchpoint earns attention and drives conversion.
             </p>
-            <div class="mt-8 flex items-center gap-2 text-primary font-bold text-label-caps uppercase tracking-[0.15em] font-label-caps">
-                Explore Research
-                <span class="material-symbols-outlined text-base">arrow_downward</span>
+            <div class="department-card__cta mt-8 flex items-center gap-2 text-primary font-bold text-label-caps uppercase font-label-caps">
+                Open chapter
+                <span class="department-card__chevron material-symbols-outlined text-base">chevron_right</span>
             </div>
         </a>
 
-        <a href="#key-issues" class="group bg-surface-container-lowest rounded-xl p-8 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow fade-in">
+        <a href="./customer-service/" class="department-card group bg-surface-container-lowest rounded-xl p-6 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow fade-in">
             <div class="flex items-center justify-between mb-8">
-                <span class="font-display text-4xl text-primary/20">02</span>
-                <div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
-                    <span class="material-symbols-outlined">error_outline</span>
+                <span class="department-card__number type-h3 text-primary/20">02</span>
+                <div class="department-card__icon">
+                    <span class="material-symbols-outlined">support_agent</span>
                 </div>
             </div>
-            <h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">Key Issues</h2>
-            <p class="text-on-surface-variant flex-grow font-body-md">
-                UX/UI audit of the existing flow, including its strengths, weaknesses, usability issues, and key design trade-offs.
+            <h2 class="department-card__title type-subtitle-domine mb-4 transition-colors">Customer Service</h2>
+            <p class="department-card__copy text-on-surface-variant flex-grow font-body-sm text-body-sm">
+                Turn recurring questions, complaints, and support insights into clearer journeys with fewer customer pain points.
             </p>
-            <div class="mt-8 flex items-center gap-2 text-primary font-bold text-label-caps uppercase tracking-[0.15em] font-label-caps">
-                View Audits
-                <span class="material-symbols-outlined text-base">arrow_downward</span>
+            <div class="department-card__cta mt-8 flex items-center gap-2 text-primary font-bold text-label-caps uppercase font-label-caps">
+                Open chapter
+                <span class="department-card__chevron material-symbols-outlined text-base">chevron_right</span>
             </div>
         </a>
 
-        <a href="#improvements" class="group bg-surface-container-lowest rounded-xl p-8 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow fade-in">
+        <a href="./creative/" class="department-card group bg-surface-container-lowest rounded-xl p-6 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow fade-in">
             <div class="flex items-center justify-between mb-8">
-                <span class="font-display text-4xl text-primary/20">03</span>
-                <div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
-                    <span class="material-symbols-outlined">auto_awesome</span>
-                </div>
-            </div>
-            <h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">Improvements</h2>
-            <p class="text-on-surface-variant flex-grow font-body-md">
-                Interactive prototype demonstrating the before-and-after experience, supported by a scalable design system.
-            </p>
-            <div class="mt-8 flex items-center gap-2 text-primary font-bold text-label-caps uppercase tracking-[0.15em] font-label-caps">
-                See Redesign
-                <span class="material-symbols-outlined text-base">arrow_downward</span>
-            </div>
-        </a>
-    </div>
-</section>
-
-<!-- ==================== UX REVIEW ==================== -->
-<section id="ux-review" class="bg-surface-container-low py-24">
-    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <header class="text-center mb-16 fade-in">
-            <h2 class="font-display text-display md:text-[56px] text-on-surface leading-tight max-w-4xl mx-auto">UX Review</h2>
-        </header>
-
-        <!-- Sub Navigation -->
-        <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-16 fade-in" role="tablist" aria-label="UX Review sections">
-            <button type="button" class="sub-nav-link font-body-md text-body-md uppercase tracking-widest text-primary font-bold" data-review-tab="context" role="tab" aria-selected="true">Context</button>
-            <button type="button" class="sub-nav-link font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" data-review-tab="users-benchmarks" role="tab" aria-selected="false">Users &amp; Competitors</button>
-        </div>
-
-        <!-- Product Context -->
-        <div id="context" class="bg-surface-container-lowest rounded-3xl p-8 md:p-12 border border-outline-variant/30 soft-shadow mb-stack-lg fade-in" data-review-panel="context" role="tabpanel">
-            <h3 class="font-display text-3xl md:text-4xl mb-12">Context</h3>
-
-            <div class="flex flex-col gap-8">
-                <!-- Purpose, full-width landscape panel -->
-                <div class="w-full rounded-2xl p-6 md:p-8 bg-surface-container-low border border-outline-variant/30">
-                    <h4 class="font-headline-lg text-xl mb-4 text-primary">Purpose and Business Metrics</h4>
-                    <p class="text-on-surface-variant leading-relaxed">
-                        Korean Skincare is a curated K-beauty marketplace that makes unfamiliar products, ingredients, and routines more accessible to Western consumers. Its business goal is to attract new customers, build trust in the platform, and develop long-term customer relationships. Business success can therefore be evaluated through metrics such as customer acquisition, conversion rate, average order value, repeat purchase rate, and customer retention.
-                    </p>
-                </div>
-
-                <!-- Flow chosen + why -->
-                <div id="strategy" class="w-full rounded-2xl p-6 md:p-8 bg-surface-container-low border border-outline-variant/30">
-                    <h4 class="font-headline-lg text-xl mb-6 text-primary">Why Discovery Flow</h4>
-
-                    <div class="flex flex-col lg:flex-row lg:items-stretch gap-10 lg:gap-12">
-                        <div class="lg:w-[380px] shrink-0 flex flex-col justify-between gap-6 lg:gap-8">
-                            <div>
-                                <h5 class="font-headline-lg text-lg mb-1 text-primary">Conversion impact</h5>
-                                <p class="text-on-surface-variant leading-normal">
-                                    Discovery is the first step before purchase. If users cannot find relevant products, they may drop off before product detail or checkout.
-                                </p>
-                            </div>
-                            <div>
-                                <h5 class="font-headline-lg text-lg mb-1 text-primary">User fit</h5>
-                                <p class="text-on-surface-variant leading-normal">
-                                    Users on the app are probably already quite loyal and have an account. That is why personalization matters to them: they expect discovery to reflect their skin concerns, preferences, and past behavior instead of starting from a blank catalog every visit.
-                                </p>
-                            </div>
-                            <div>
-                                <h5 class="font-headline-lg text-lg mb-1 text-primary">Real feedback</h5>
-                                <p class="text-on-surface-variant leading-normal">
-                                    Reviews from the Google Play and Apple Store mentioned weak search, missing filters, unclear sale browsing, and no easy brand navigation.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex-1 min-w-0 grid grid-cols-1 lg:grid-cols-2 gap-4">
-                            <div class="review-card bg-white rounded-xl p-3 border border-outline-variant/20">
-                                <span class="font-label-caps text-label-caps uppercase tracking-widest text-primary block mb-2 text-center">Google Play Reviews</span>
-                                <img src="./assets/reviews-google-play.png" alt="Google Play user reviews on app quality and filtering needs" class="review-screenshot rounded-lg"/>
-                            </div>
-                            <div class="review-card bg-white rounded-xl p-3 border border-outline-variant/20">
-                                <span class="font-label-caps text-label-caps uppercase tracking-widest text-primary block mb-2 text-center">App Store Reviews</span>
-                                <img src="./assets/reviews-app-store.png" alt="App Store user reviews on quiz discovery and search friction" class="review-screenshot rounded-lg"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-10 pt-8 border-t border-outline-variant/20">
-                        <h5 class="font-headline-lg text-xl mb-6 text-primary">Success Metrics</h5>
-                        <div class="metrics-grid grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <div class="metric-accordion metric-accordion--main">
-                                <button class="metric-trigger metric-trigger--main" type="button" aria-expanded="false">
-                                    <div class="metric-icon metric-icon--main"><span class="material-symbols-outlined">payments</span></div>
-                                    <span class="metric-title metric-title--main">Primary business metrics</span>
-                                    <span class="material-symbols-outlined metric-chevron">expand_more</span>
-                                </button>
-                                <div class="metric-content">
-                                    <div class="metric-content-inner">
-                                        <div class="metric-item">
-                                            <div class="metric-item-icon"><span class="material-symbols-outlined">shopping_cart_checkout</span></div>
-                                            <div>
-                                                <p class="metric-item-title">CVR / purchase conversion rate</p>
-                                                <p class="metric-item-desc">Do more users who enter discovery eventually purchase?</p>
-                                            </div>
-                                        </div>
-                                        <div class="metric-item">
-                                            <div class="metric-item-icon"><span class="material-symbols-outlined">payments</span></div>
-                                            <div>
-                                                <p class="metric-item-title">Revenue per user / average order value</p>
-                                                <p class="metric-item-desc">Does better discovery lead users to buy more relevant products or build fuller routines?</p>
-                                            </div>
-                                        </div>
-                                        <div class="metric-item">
-                                            <div class="metric-item-icon"><span class="material-symbols-outlined">add_shopping_cart</span></div>
-                                            <div>
-                                                <p class="metric-item-title">Add to cart rate</p>
-                                                <p class="metric-item-desc">Are users moving from discovery into purchase intent?</p>
-                                            </div>
-                                        </div>
-                                        <div class="metric-item">
-                                            <div class="metric-item-icon"><span class="material-symbols-outlined">undo</span></div>
-                                            <div>
-                                                <p class="metric-item-title">Return rate</p>
-                                                <p class="metric-item-desc">Do users choose more suitable products, reducing wrong fit purchases?</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="metric-accordion metric-accordion--main">
-                                <button class="metric-trigger metric-trigger--main" type="button" aria-expanded="false">
-                                    <div class="metric-icon metric-icon--main"><span class="material-symbols-outlined">analytics</span></div>
-                                    <span class="metric-title metric-title--main">Supporting UX metrics</span>
-                                    <span class="material-symbols-outlined metric-chevron">expand_more</span>
-                                </button>
-                                <div class="metric-content">
-                                    <div class="metric-content-inner">
-                                        <div class="metric-item">
-                                            <div class="metric-item-icon"><span class="material-symbols-outlined">search</span></div>
-                                            <div>
-                                                <p class="metric-item-title">Search success rate</p>
-                                                <p class="metric-item-desc">Do searches lead to product clicks, filter use, add to cart, or purchase?</p>
-                                            </div>
-                                        </div>
-                                        <div class="metric-item">
-                                            <div class="metric-item-icon"><span class="material-symbols-outlined">filter_list</span></div>
-                                            <div>
-                                                <p class="metric-item-title">Filter usage rate</p>
-                                                <p class="metric-item-desc">Are users using skin type, concern, brand, price, and rating filters to narrow options?</p>
-                                            </div>
-                                        </div>
-                                        <div class="metric-item">
-                                            <div class="metric-item-icon"><span class="material-symbols-outlined">category</span></div>
-                                            <div>
-                                                <p class="metric-item-title">Category to product CTR</p>
-                                                <p class="metric-item-desc">Do users enter a category and click into relevant products?</p>
-                                            </div>
-                                        </div>
-                                        <div class="metric-item">
-                                            <div class="metric-item-icon"><span class="material-symbols-outlined">quiz</span></div>
-                                            <div>
-                                                <p class="metric-item-title">Quiz / guided recommendation completion rate</p>
-                                                <p class="metric-item-desc">Are users engaging with guided discovery when they do not know what to choose?</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Users & Competitors -->
-        <div id="users-benchmarks" class="bg-surface-container-lowest rounded-3xl p-8 md:p-12 border border-outline-variant/30 soft-shadow mb-stack-lg fade-in" data-review-panel="users-benchmarks" role="tabpanel" hidden>
-            <h3 class="font-display text-3xl md:text-4xl mb-12">Users &amp; Competitors</h3>
-
-            <div class="flex flex-col gap-8">
-                <!-- Target Users -->
-                <div class="w-full rounded-2xl p-6 md:p-8 bg-surface-container-low border border-outline-variant/30">
-                    <h4 class="font-headline-lg text-xl mb-6 text-primary">Target Users</h4>
-
-                    <div class="mb-6">
-                        <h5 class="font-bold text-on-surface mb-2">Core target user</h5>
-                        <p class="text-on-surface-variant leading-relaxed">
-                            Users on the app are probably already quite loyal and have an account. That's why personalization is important to them.
-                        </p>
-                    </div>
-
-                    <div class="space-y-8">
-                        <div class="flex flex-col gap-3">
-                        <div class="persona-accordion persona-accordion--primary">
-                            <button class="persona-trigger" type="button" aria-expanded="false">
-                                <div class="persona-icon">
-                                    <span class="material-symbols-outlined">healing</span>
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <span class="font-bold text-on-surface block">Problem solution shoppers</span>
-                                    <span class="text-[10px] font-label-caps uppercase tracking-widest text-primary mt-0.5 block">Core target user</span>
-                                </div>
-                                <span class="material-symbols-outlined persona-chevron">expand_more</span>
-                            </button>
-                            <div class="persona-content">
-                                <div class="persona-content-inner text-on-surface-variant font-body-md text-body-md space-y-4">
-                                    <div>
-                                        <span class="font-bold text-on-surface text-xs uppercase tracking-wider block mb-2">Needs</span>
-                                        <ul class="space-y-1.5 list-disc list-inside">
-                                            <li>Shop by concern</li>
-                                            <li>Before/after or review based evidence</li>
-                                            <li>Clear product benefits</li>
-                                            <li>Filters that map directly to their concern</li>
-                                            <li>Recommended routines for that concern</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <span class="font-bold text-on-surface text-xs uppercase tracking-wider block mb-1">Pain point</span>
-                                        <p>They do not want to browse by brand first; they want the app to help solve a problem.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="persona-accordion persona-accordion--primary">
-                            <button class="persona-trigger" type="button" aria-expanded="false">
-                                <div class="persona-icon">
-                                    <span class="material-symbols-outlined">explore</span>
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <span class="font-bold text-on-surface block">Skincare explorers / "want to try" users</span>
-                                    <span class="text-[10px] font-label-caps uppercase tracking-widest text-primary mt-0.5 block">Primary target</span>
-                                </div>
-                                <span class="material-symbols-outlined persona-chevron">expand_more</span>
-                            </button>
-                            <div class="persona-content">
-                                <div class="persona-content-inner text-on-surface-variant font-body-md text-body-md space-y-4">
-                                    <p>These users are not complete beginners, but they are browsing because they want to discover something new. They may not have a fixed product in mind.</p>
-                                    <div>
-                                        <span class="font-bold text-on-surface text-xs uppercase tracking-wider block mb-2">Needs</span>
-                                        <ul class="space-y-1.5 list-disc list-inside">
-                                            <li>Discovery flows</li>
-                                            <li>Trending products</li>
-                                            <li>New arrivals</li>
-                                            <li>Curated collections</li>
-                                            <li>Filters by concern, skin type, ingredient, and product type</li>
-                                            <li>Easy comparison between similar products</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <span class="font-bold text-on-surface text-xs uppercase tracking-wider block mb-1">Pain point</span>
-                                        <p>They are interested but need a reason to trust and try a product.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-
-                        <div>
-                            <h5 class="font-bold text-on-surface mb-4">Secondary users</h5>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="persona-accordion persona-accordion--secondary">
-                            <div class="persona-trigger persona-trigger--secondary">
-                                <div class="persona-icon">
-                                    <span class="material-symbols-outlined">format_list_numbered</span>
-                                </div>
-                                <span class="persona-title flex-1">Routine builders</span>
-                            </div>
-                        </div>
-
-                        <div class="persona-accordion persona-accordion--secondary">
-                            <div class="persona-trigger persona-trigger--secondary">
-                                <div class="persona-icon">
-                                    <span class="material-symbols-outlined">science</span>
-                                </div>
-                                <span class="persona-title flex-1">Ingredient conscious users</span>
-                            </div>
-                        </div>
-
-                        <div class="persona-accordion persona-accordion--secondary">
-                            <div class="persona-trigger persona-trigger--secondary">
-                                <div class="persona-icon">
-                                    <span class="material-symbols-outlined">spa</span>
-                                </div>
-                                <span class="persona-title flex-1">K beauty beginners</span>
-                            </div>
-                        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Competitive Benchmarks -->
-                <div class="w-full rounded-2xl p-6 md:p-8 bg-surface-container-low border border-outline-variant/30">
-                    <h4 class="font-headline-lg text-xl mb-6 text-primary">Competitive Benchmarks</h4>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 soft-shadow">
-                            <div class="flex items-center mb-3 min-h-10">
-                                <img src="./assets/logos/skin-cupid.svg" alt="Skin Cupid" class="h-10 w-auto max-w-[180px] object-contain object-left"/>
-                            </div>
-                            <span class="text-[10px] font-label-caps uppercase tracking-widest text-primary block mb-2">Education led discovery</span>
-                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Strong at turning skincare knowledge into shopping confidence through guides, routines, and consultation style content.</p>
-                        </div>
-                        <div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 soft-shadow">
-                            <div class="flex items-center gap-3 mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-white border border-outline-variant/20 flex items-center justify-center overflow-hidden shrink-0">
-                                    <img src="./assets/logos/little-wonderland.png" alt="Little Wonderland logo" class="w-8 h-8 object-contain"/>
-                                </div>
-                                <span class="font-bold text-on-surface">Little Wonderland</span>
-                            </div>
-                            <span class="text-[10px] font-label-caps uppercase tracking-widest text-primary block mb-2">Local K beauty authority</span>
-                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Feels closer to korean skincare's European market, with a broad brand catalog, blog, and community led social content that builds trust more like a specialist boutique than a general beauty retailer.</p>
-                        </div>
-                        <div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 soft-shadow">
-                            <div class="flex items-center gap-3 mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-white border border-outline-variant/20 flex items-center justify-center overflow-hidden shrink-0">
-                                    <img src="./assets/logos/stylevana.png" alt="Stylevana logo" class="w-8 h-8 object-contain"/>
-                                </div>
-                                <span class="font-bold text-on-surface">Stylevana</span>
-                            </div>
-                            <span class="text-[10px] font-label-caps uppercase tracking-widest text-primary block mb-2">Scale + price pressure</span>
-                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Competes through large assortment, frequent promotions, but the mobile experience feels less polished.</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <h4 class="font-headline-lg text-xl mb-4 text-primary">What can we do</h4>
-                        <p class="text-on-surface-variant leading-relaxed">
-                            Across the benchmarked competitors, category based navigation is a shared pattern for supporting product discovery. Skin Cupid demonstrates that effective K beauty shopping depends on guidance, personalization, and confidence in product choices. With Skin Cupid and Little Wonderland being primarily web first, and Stylevana's app experience feeling less polished, korean skincare has a clear opportunity to differentiate through a stronger, more guided mobile app experience.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== KEY ISSUES ==================== -->
-<section id="key-issues" class="bg-surface py-24">
-    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <header class="text-center mb-16 fade-in">
-            <h2 class="font-display text-display md:text-[56px] text-on-surface leading-tight max-w-4xl mx-auto">Key Issues &amp; Severity</h2>
-        </header>
-
-        <div class="audit-intro grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16 fade-in">
-            <div class="audit-intro__panel">
-                <h3 class="audit-intro__title">How I decide severity</h3>
-                <p class="audit-intro__text">
-                    I prioritize issues by how directly they affect the user's ability to find the right product. Since the app already has many features, the trade-off is not to add more modules, but to fix the moments that block discovery.
-                </p>
-                <p class="audit-intro__text">
-                    <strong>High severity</strong> = breaks the flow.
-                </p>
-                <p class="audit-intro__text">
-                    <strong>Medium severity</strong> = the flow still works, but feels harder to use.
-                </p>
-                <p class="audit-intro__text">
-                    <strong>Low severity</strong> = minor polish gaps.
-                </p>
-                <p class="audit-intro__text">
-                    For this review, I focused on high severity issues first.
-                </p>
-            </div>
-            <div class="audit-intro__panel">
-                <h3 class="audit-intro__title">User story</h3>
-                <div class="user-story">
-                    <p class="user-story__line"><span class="user-story__label">As a</span> first-time user with mild sunburn after vacation from Spain</p>
-                    <p class="user-story__line"><span class="user-story__label">I want to</span> find after sun care through categories or search</p>
-                    <p class="user-story__line"><span class="user-story__label">So that</span> I can treat my skin without already knowing the exact product name</p>
-                </div>
-                <div class="user-story__scenario">
-                    <p class="user-story__scenario-label">Scenario: Lucy</p>
-                    <p class="audit-intro__text">
-                        Lucy knew our brand from a friend and opened the app for the first time. The homepage promotions felt overwhelming and did not give her clear guidance, so she went to Collections and opened Skin Concerns, thinking after sun might be there. She did not find it. She wanted to search from Collections, but there was no search bar, so she went back to the homepage and started searching.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div id="journey" class="bg-surface-container-lowest rounded-3xl p-8 md:p-12 border border-outline-variant/20 soft-shadow fade-in">
-            <h3 class="font-display text-3xl md:text-4xl mb-4">Key Issues in the Current Flow</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant mb-6">Click a step to see the annotated screen.</p>
-
-            <div class="journey-map mb-10">
-                <div class="journey-map__row">
-                    <button type="button" class="journey-screen journey-screen--high active-journey-screen" data-step="1" data-severity="high" aria-pressed="true" aria-label="Homepage, high severity">
-                        <div class="journey-screen__frame">
-                            <span class="journey-screen__badge">1</span>
-                            <img src="./assets/journey/01-homepage.png" alt="korean skincare app homepage" class="journey-screen__image"/>
-                        </div>
-                        <span class="journey-screen__label">Homepage</span>
-                        <span class="journey-screen__severity">High severity</span>
-                    </button>
-                    <div class="journey-map__arrow journey-map__arrow--h" aria-hidden="true"><span class="material-symbols-outlined">arrow_forward</span></div>
-                    <button type="button" class="journey-screen journey-screen--high" data-step="2" data-severity="high" aria-pressed="false" aria-label="Collections, high severity">
-                        <div class="journey-screen__frame">
-                            <span class="journey-screen__badge">2</span>
-                            <img src="./assets/journey/02-collections.png" alt="Collections category list" class="journey-screen__image"/>
-                        </div>
-                        <span class="journey-screen__label">Collections</span>
-                        <span class="journey-screen__severity">High severity</span>
-                    </button>
-                    <div class="journey-map__arrow journey-map__arrow--h" aria-hidden="true"><span class="material-symbols-outlined">arrow_forward</span></div>
-                    <button type="button" class="journey-screen journey-screen--high" data-step="3" data-severity="high" aria-pressed="false" aria-label="Skin Concerns, high severity">
-                        <div class="journey-screen__frame">
-                            <span class="journey-screen__badge">3</span>
-                            <img src="./assets/journey/03-skin-concerns.png" alt="Skin Concerns category list" class="journey-screen__image"/>
-                        </div>
-                        <span class="journey-screen__label">Skin Concerns</span>
-                        <span class="journey-screen__severity">High severity</span>
-                    </button>
-                    <div class="journey-map__arrow journey-map__arrow--h" aria-hidden="true"><span class="material-symbols-outlined">arrow_forward</span></div>
-                    <button type="button" class="journey-screen journey-screen--low" data-step="4" data-severity="low" aria-pressed="false" aria-label="Search, low severity">
-                        <div class="journey-screen__frame">
-                            <span class="journey-screen__badge">4</span>
-                            <img src="./assets/journey/03-search.png" alt="Search with preview results" class="journey-screen__image"/>
-                        </div>
-                        <span class="journey-screen__label">Search</span>
-                        <span class="journey-screen__severity journey-screen__severity--low">Low severity</span>
-                    </button>
-                    <div class="journey-map__arrow journey-map__arrow--h" aria-hidden="true"><span class="material-symbols-outlined">arrow_forward</span></div>
-                    <button type="button" class="journey-screen journey-screen--low" data-step="5" data-severity="low" aria-pressed="false" aria-label="Product listing, low severity">
-                        <div class="journey-screen__frame">
-                            <span class="journey-screen__badge">5</span>
-                            <img src="./assets/journey/04-product-listing.png" alt="Product listing with sort and filter" class="journey-screen__image"/>
-                        </div>
-                        <span class="journey-screen__label">Product listing</span>
-                        <span class="journey-screen__severity journey-screen__severity--low">Low severity</span>
-                    </button>
-                    <div class="journey-map__arrow journey-map__arrow--h" aria-hidden="true"><span class="material-symbols-outlined">arrow_forward</span></div>
-                    <button type="button" class="journey-screen journey-screen--medium" data-step="6" data-severity="medium" aria-pressed="false" aria-label="Product detail, medium severity">
-                        <div class="journey-screen__frame">
-                            <span class="journey-screen__badge">6</span>
-                            <img src="./assets/journey/05-product-detail.png" alt="Product detail page" class="journey-screen__image"/>
-                        </div>
-                        <span class="journey-screen__label">Product detail</span>
-                        <span class="journey-screen__severity journey-screen__severity--medium">Medium severity</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="journey-annotation-legend mb-6" aria-label="Annotation legend">
-                <span class="journey-annotation-legend__item journey-annotation-legend__item--pros">
-                    <span class="journey-annotation-legend__dot" aria-hidden="true"></span>
-                    Pros
-                </span>
-                <span class="journey-annotation-legend__item journey-annotation-legend__item--cons">
-                    <span class="journey-annotation-legend__dot" aria-hidden="true"></span>
-                    Cons
-                </span>
-                <span class="journey-annotation-legend__item journey-annotation-legend__item--improve">
-                    <span class="journey-annotation-legend__dot" aria-hidden="true"></span>
-                    Could improve
-                </span>
-            </div>
-
-            <div id="details-container" class="journey-detail-container transition-all duration-300 w-full">
-                <div id="detail-content"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== IMPROVEMENTS ==================== -->
-<section id="improvements" class="bg-surface-container-low">
-    <!-- Proposed Solution -->
-    <div id="proposed-solution" class="py-24">
-        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <header class="text-center mb-16 fade-in">
-                <h2 class="font-display text-display md:text-[56px] text-on-surface leading-tight max-w-4xl mx-auto">Proposed Solution</h2>
-                <p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed max-w-2xl mx-auto mt-4">
-                    Explore the redesigned discovery flow in an interactive prototype. Click through screens, and drag the before/after slider to compare the current app with the new design.
-                </p>
-            </header>
-
-            <div class="solution-prototype fade-in" data-solution-prototype>
-                <div class="solution-prototype__layout">
-                    <div class="solution-prototype__phone-wrap">
-                        <div class="proto-ba-labels" aria-label="Before and after comparison labels">
-                            <span class="proto-ba__label proto-ba__label--before">Before</span>
-                            <span class="proto-ba__label proto-ba__label--after">After</span>
-                        </div>
-                        <div class="solution-prototype__phone-scaler">
-                            <div class="iphone-frame">
-                                <div class="iphone-frame__screen">
-                                    <div data-proto-phone></div>
-                                    <div class="proto-ba" data-proto-ba style="--proto-ba-pos: 50%;">
-                                        <div class="proto-ba__before" data-proto-ba-before>
-                                            <img src="./assets/journey/01-homepage.png" alt="Current design before redesign" class="proto-ba__before-img" data-proto-ba-img/>
-                                        </div>
-                                        <div class="proto-ba__handle" data-proto-ba-handle role="slider" tabindex="0" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-                                            <span class="proto-ba__line" aria-hidden="true"></span>
-                                            <span class="proto-ba__knob" aria-hidden="true">
-                                                <span class="material-symbols-outlined">chevron_left</span>
-                                                <span class="material-symbols-outlined">chevron_right</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="iphone-frame__home-indicator" aria-hidden="true"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <aside class="solution-prototype__guide">
-                        <p class="solution-prototype__guide-step" data-proto-title>Homepage</p>
-                        <div class="solution-prototype__guide-action">
-                            <p class="solution-prototype__guide-action-label">User story</p>
-                            <p class="solution-prototype__guide-action-text" data-proto-action>Lucy opens the app for the first time after a sunny holiday in Spain. She has mild sunburn and does not know a product name. She just wants after sun care.</p>
-                        </div>
-                        <div class="solution-prototype__guide-changed">
-                            <p class="solution-prototype__guide-changed-label">What I have changed</p>
-                            <p class="solution-prototype__guide-changed-text" data-proto-changed>Added a category bar and search directly under the homepage header, also shorten the promotions. Users get clear starting points: browse by category or search by keyword, without scrolling too much.</p>
-                        </div>
-                        <div class="solution-prototype__guide-impact">
-                            <p class="solution-prototype__guide-impact-label">Impact</p>
-                            <p class="solution-prototype__guide-impact-text" data-proto-impact>Faster discovery through higher search and category engagement with less homepage drop-off.</p>
-                        </div>
-                        <p class="solution-prototype__guide-path" data-proto-path>Homepage</p>
-                        <div class="solution-prototype__actions">
-                            <button type="button" class="solution-prototype__reset" data-proto-reset>
-                                <span class="material-symbols-outlined">restart_alt</span>
-                                Restart flow
-                            </button>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Design System -->
-    <div id="design-system" class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <header class="text-center mb-16 fade-in">
-            <h2 class="font-display text-display md:text-[56px] text-on-surface leading-tight max-w-4xl mx-auto">Design System</h2>
-            <p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed max-w-2xl mx-auto mt-4">
-                The redesign extends beyond this flow. A shared system keeps typography, spacing, components, and CTAs consistent across the app.
-            </p>
-        </header>
-
-        <div class="design-system-cards grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter mb-10">
-            <button type="button" class="design-system-card design-system-card--active bg-surface rounded-xl card-shadow border border-outline-variant/20 transition-transform duration-500 fade-in text-left cursor-pointer" data-design-topic="typography" aria-pressed="true">
-                <span class="design-system-card__icon">
-                    <span class="material-symbols-outlined">format_size</span>
-                </span>
-                <h4 class="design-system-card__title font-headline-md text-headline-md text-on-surface">Typography &amp; spacing</h4>
-                <p class="design-system-card__text font-body-md text-body-md text-on-surface-variant">
-                    Fewer font sizes and weights, aligned padding, and clearer section hierarchy so information heavy pages feel easier to scan.
-                </p>
-            </button>
-            <button type="button" class="design-system-card bg-surface rounded-xl card-shadow border border-outline-variant/20 transition-transform duration-500 fade-in text-left cursor-pointer" data-design-topic="cta" aria-pressed="false">
-                <span class="design-system-card__icon">
-                    <span class="material-symbols-outlined">touch_app</span>
-                </span>
-                <h4 class="design-system-card__title font-headline-md text-headline-md text-on-surface">CTA hierarchy</h4>
-                <p class="design-system-card__text font-body-md text-body-md text-on-surface-variant">
-                    Primary and secondary actions are visually distinct, so users always know what to tap next, especially at checkout.
-                </p>
-            </button>
-            <button type="button" class="design-system-card bg-surface rounded-xl card-shadow border border-outline-variant/20 transition-transform duration-500 fade-in text-left cursor-pointer" data-design-topic="components" aria-pressed="false">
-                <span class="design-system-card__icon">
-                    <span class="material-symbols-outlined">widgets</span>
-                </span>
-                <h4 class="design-system-card__title font-headline-md text-headline-md text-on-surface">Components &amp; icons</h4>
-                <p class="design-system-card__text font-body-md text-body-md text-on-surface-variant">
-                    Reusable cards, filters, and navigation patterns with one icon style, so every screen feels part of the same product.
-                </p>
-            </button>
-            <button type="button" class="design-system-card bg-surface rounded-xl card-shadow border border-outline-variant/20 transition-transform duration-500 fade-in text-left cursor-pointer" data-design-topic="colors" aria-pressed="false">
-                <span class="design-system-card__icon">
+                <span class="department-card__number type-h3 text-primary/20">03</span>
+                <div class="department-card__icon">
                     <span class="material-symbols-outlined">palette</span>
-                </span>
-                <h4 class="design-system-card__title font-headline-md text-headline-md text-on-surface">Color system</h4>
-                <p class="design-system-card__text font-body-md text-body-md text-on-surface-variant">
-                    Brand pink, soft surfaces, and neutral text tones applied consistently across screens, accents, and CTAs.
-                </p>
-            </button>
-        </div>
-
-        <div id="design-system-detail" class="design-system-detail bg-surface-container-low rounded-2xl p-8 md:p-10 border border-outline-variant/30 fade-in">
-            <div class="mb-6">
-                <span class="font-label-caps text-primary uppercase tracking-widest text-[10px] block mb-2">Design tokens</span>
-                <h4 class="font-headline-lg text-2xl text-on-surface" id="design-system-detail-title">Typography &amp; spacing</h4>
+                </div>
             </div>
-            <div id="design-system-detail-content" class="design-system-detail__content"></div>
-        </div>
-    </div>
-
-    <!-- Roadmap -->
-    <div class="py-16 md:py-20 bg-surface px-margin-mobile md:px-margin-desktop">
-        <div class="max-w-container-max mx-auto">
-            <div class="text-center mb-10 fade-in">
-                <h3 class="font-display text-display text-on-surface">Proposed Improvements</h3>
-                <p class="text-on-surface-variant mt-3 max-w-2xl mx-auto font-body-md text-body-md leading-relaxed">
-                    A four-step roadmap from audit findings to shipped improvements.
-                </p>
+            <h2 class="department-card__title type-subtitle-domine mb-4 transition-colors">Creative</h2>
+            <p class="department-card__copy text-on-surface-variant flex-grow font-body-sm text-body-sm">
+                Shape visuals, storytelling, and brand expression around experiences that stay consistent, useful, and memorable.
+            </p>
+            <div class="department-card__cta mt-8 flex items-center gap-2 text-primary font-bold text-label-caps uppercase font-label-caps">
+                Open chapter
+                <span class="department-card__chevron material-symbols-outlined text-base">chevron_right</span>
             </div>
+        </a>
 
-            <div class="improvements-roadmap fade-in" role="list">
-                <article class="improvements-roadmap__step roadmap-phase active" role="listitem">
-                    <div class="improvements-roadmap__marker">
-                        <span class="improvements-roadmap__num">01</span>
-                    </div>
-                    <div class="improvements-roadmap__card phase-card">
-                        <h4 class="improvements-roadmap__title">Prioritize</h4>
-                        <p class="improvements-roadmap__text">Focus on high severity issues first: moments that block product discovery, force backtracking, or reduce product confidence.</p>
-                    </div>
-                </article>
-
-                <article class="improvements-roadmap__step roadmap-phase" role="listitem">
-                    <div class="improvements-roadmap__marker">
-                        <span class="improvements-roadmap__num">02</span>
-                    </div>
-                    <div class="improvements-roadmap__card phase-card">
-                        <h4 class="improvements-roadmap__title">Align with the dev agency</h4>
-                        <p class="improvements-roadmap__text">Run a quick feasibility review with the agency to understand what can be changed in the current app architecture, CMS, search logic, and product taxonomy.</p>
-                    </div>
-                </article>
-
-                <article class="improvements-roadmap__step roadmap-phase" role="listitem">
-                    <div class="improvements-roadmap__marker">
-                        <span class="improvements-roadmap__num">03</span>
-                    </div>
-                    <div class="improvements-roadmap__card phase-card">
-                        <h4 class="improvements-roadmap__title">Prepare handoff</h4>
-                        <p class="improvements-roadmap__text">Translate the design into an implementation ready design system handoff: tokens, reusable components, component states, and acceptance criteria, so the agency can build the experience consistently and scale it across the app. And even further if we have our own dev team, they can benefit from this.</p>
-                    </div>
-                </article>
-
-                <article class="improvements-roadmap__step roadmap-phase" role="listitem">
-                    <div class="improvements-roadmap__marker">
-                        <span class="improvements-roadmap__num">04</span>
-                    </div>
-                    <div class="improvements-roadmap__card phase-card">
-                        <h4 class="improvements-roadmap__title">Test and iterate</h4>
-                        <p class="improvements-roadmap__text">Validate the redesigned flow with a small usability test, then track search success, category engagement, product detail clicks, and add to cart from discovery.</p>
-                    </div>
-                </article>
+        <a href="./dev-team/" class="department-card group bg-surface-container-lowest rounded-xl p-6 card-hover transition-smooth flex flex-col h-full border border-outline-variant/20 soft-shadow fade-in">
+            <div class="flex items-center justify-between mb-8">
+                <span class="department-card__number type-h3 text-primary/20">04</span>
+                <div class="department-card__icon">
+                    <span class="material-symbols-outlined">code</span>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Footer Image -->
-    <div class="w-full h-80 overflow-hidden relative">
-        <img
-            src="./assets/footer-skincare.jpg"
-            alt="Minimal skincare product flat lay with serum bottles and cream jars"
-            class="w-full h-full object-cover object-center"
-            loading="lazy"
-            decoding="async"
-        />
-        <div class="absolute inset-0 bg-primary/15 mix-blend-multiply pointer-events-none"></div>
+            <h2 class="department-card__title type-subtitle-domine mb-4 transition-colors">Dev Team</h2>
+            <p class="department-card__copy text-on-surface-variant flex-grow font-body-sm text-body-sm">
+                Translate UX decisions into scalable, accessible products through early technical alignment and shared standards.
+            </p>
+            <div class="department-card__cta mt-8 flex items-center gap-2 text-primary font-bold text-label-caps uppercase font-label-caps">
+                Open chapter
+                <span class="department-card__chevron material-symbols-outlined text-base">chevron_right</span>
+            </div>
+        </a>
     </div>
 </section>
 
-<!-- Prototype Modal -->
-<div id="prototype-modal" class="fixed inset-0 z-[70] bg-inverse-surface/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-surface rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto soft-shadow">
-        <div class="flex justify-between items-center p-6">
-            <h3 class="font-headline-lg text-headline-lg text-on-surface">Proposed Solution</h3>
-            <button id="prototype-close" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" aria-label="Close">
-                <span class="material-symbols-outlined">close</span>
-            </button>
+<!-- ==================== UX PRACTICE NAVIGATION ==================== -->
+<section id="useful-links" class="home-practice-nav" aria-label="UX cookbook areas">
+    <nav class="cookbook-subnav" aria-label="UX practice navigation">
+        <button class="is-active" type="button" aria-current="page" data-practice-tab="ux-operations">UX Operations</button>
+        <button type="button" data-practice-tab="ux-research">UX Research</button>
+            <button type="button" data-practice-tab="ux-design">UX Design</button>
+        <button type="button" data-practice-tab="handoff">Handoff</button>
+    </nav>
+
+    <section class="ux-ops-panel" data-practice-panel="ux-operations" aria-labelledby="ux-operations-title">
+        <div class="ux-ops-heading">
+            <h2 id="ux-operations-title">UX Operations</h2>
         </div>
-        <div class="p-6 md:p-8">
-            <div class="solution-prototype" data-solution-prototype data-proto-modal>
-                <div class="solution-prototype__layout">
-                    <div class="solution-prototype__phone-wrap">
-                        <div class="proto-ba-labels" aria-label="Before and after comparison labels">
-                            <span class="proto-ba__label proto-ba__label--before">Before</span>
-                            <span class="proto-ba__label proto-ba__label--after">After</span>
-                        </div>
-                        <div class="solution-prototype__phone-scaler">
-                            <div class="iphone-frame">
-                                <div class="iphone-frame__screen">
-                                    <div data-proto-phone></div>
-                                    <div class="proto-ba" data-proto-ba style="--proto-ba-pos: 50%;">
-                                        <div class="proto-ba__before" data-proto-ba-before>
-                                            <img src="./assets/journey/01-homepage.png" alt="Current design before redesign" class="proto-ba__before-img" data-proto-ba-img/>
-                                        </div>
-                                        <div class="proto-ba__handle" data-proto-ba-handle role="slider" tabindex="0" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-                                            <span class="proto-ba__line" aria-hidden="true"></span>
-                                            <span class="proto-ba__knob" aria-hidden="true">
-                                                <span class="material-symbols-outlined">chevron_left</span>
-                                                <span class="material-symbols-outlined">chevron_right</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="iphone-frame__home-indicator" aria-hidden="true"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <aside class="solution-prototype__guide">
-                        <p class="solution-prototype__guide-step" data-proto-title>Homepage</p>
-                        <div class="solution-prototype__guide-action">
-                            <p class="solution-prototype__guide-action-label">User story</p>
-                            <p class="solution-prototype__guide-action-text" data-proto-action></p>
-                        </div>
-                        <div class="solution-prototype__guide-changed">
-                            <p class="solution-prototype__guide-changed-label">What I have changed</p>
-                            <p class="solution-prototype__guide-changed-text" data-proto-changed></p>
-                        </div>
-                        <div class="solution-prototype__guide-impact">
-                            <p class="solution-prototype__guide-impact-label">Impact</p>
-                            <p class="solution-prototype__guide-impact-text" data-proto-impact></p>
-                        </div>
-                        <p class="solution-prototype__guide-path" data-proto-path></p>
-                        <div class="solution-prototype__actions">
-                            <button type="button" class="solution-prototype__reset" data-proto-reset>
-                                <span class="material-symbols-outlined">restart_alt</span>
-                                Restart flow
-                            </button>
-                        </div>
-                    </aside>
-                </div>
+
+        <section class="research-objective ux-ops-objective" aria-label="UX Operations objective">
+            <h3>Objective</h3>
+            <p>The four chapters above show how UX works with Marketing, Customer Service, Creative, and the Dev Team. UX Operations brings every step from those workflows together, from business goals and customer evidence to research, design, quality assurance, deployment, and learning.</p>
+        </section>
+
+        <div class="ops-workflow-scroll" tabindex="0" aria-label="Scrollable integrated UX Operations workflow">
+            <div class="ops-workflow-canvas" role="img" aria-label="The complete Marketing, Customer Service, Creative, Dev Team, UX Design, and output workflows combined without removing any steps.">
+                <div class="ops-lane ops-lane--marketing" aria-hidden="true"></div>
+                <div class="ops-lane ops-lane--cs" aria-hidden="true"></div>
+                <div class="ops-lane ops-lane--creative" aria-hidden="true"></div>
+                <div class="ops-lane ops-lane--dev" aria-hidden="true"></div>
+                <div class="ops-lane ops-lane--ux" aria-hidden="true"></div>
+                <div class="ops-lane ops-lane--outputs" aria-hidden="true"></div>
+                <div class="ops-stage-strips" aria-hidden="true"></div>
+
+                <div class="ops-lane-label ops-lane-label--marketing"><span>Input</span><strong>Marketing</strong></div>
+                <div class="ops-lane-label ops-lane-label--cs"><span>Input</span><strong>Customer Service</strong></div>
+                <div class="ops-lane-label ops-lane-label--creative"><span>Input</span><strong>Creative</strong></div>
+                <div class="ops-lane-label ops-lane-label--dev"><span>Partner</span><strong>Dev Team</strong></div>
+                <div class="ops-lane-label ops-lane-label--ux"><span>Baseline</span><strong>UX Design</strong></div>
+                <div class="ops-lane-label ops-lane-label--outputs"><strong>Output</strong></div>
+
+                <svg class="ops-connectors" viewBox="0 0 3560 1040" aria-hidden="true" focusable="false">
+                    <defs>
+                        <marker id="ops-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                        </marker>
+                    </defs>
+
+                    <path class="ops-branch" d="M 320 65 H 560"></path>
+                    <path class="ops-branch" d="M 320 588 H 560"></path>
+                    <path class="ops-branch" d="M 320 658 H 560"></path>
+                    <path d="M 320 195 H 390"></path>
+                    <path class="ops-branch" d="M 530 195 H 560"></path>
+                    <path d="M 560 65 V 718 H 600"></path>
+                    <path d="M 740 718 H 810"></path>
+                    <path d="M 670 690 V 540 H 880 V 93"></path>
+                    <path d="M 880 93 V 690"></path>
+
+                    <path d="M 950 718 H 1020"></path>
+                    <path d="M 1160 718 H 1230"></path>
+
+                    <path class="ops-branch" d="M 1370 65 H 1390 V 718"></path>
+                    <path class="ops-branch" d="M 1370 195 H 1390 V 718"></path>
+                    <path class="ops-branch" d="M 1370 718 H 1390"></path>
+                    <path d="M 1390 718 H 1440"></path>
+                    <path d="M 1580 718 H 1650"></path>
+                    <path d="M 1790 718 H 1860"></path>
+                    <path d="M 2000 718 H 2070"></path>
+
+                    <path class="ops-branch" d="M 2210 65 H 2230 V 718"></path>
+                    <path class="ops-branch" d="M 2210 195 H 2230 V 718"></path>
+                    <path class="ops-branch" d="M 2210 718 H 2230"></path>
+                    <path d="M 2230 718 H 2280"></path>
+                    <path d="M 2630 718 H 2700"></path>
+                    <path d="M 2420 718 H 2490"></path>
+
+                    <path class="ops-branch" d="M 1790 435 H 2230 V 718"></path>
+                    <path class="ops-branch" d="M 1790 505 H 2230 V 718"></path>
+                    <path class="ops-loop" d="M 2350 690 V 570 H 1720 V 690"></path>
+
+                    <path d="M 2840 718 H 2870 V 470 H 2910"></path>
+                    <path class="ops-branch" d="M 3050 470 H 3070 V 650"></path>
+                    <path d="M 3070 650 H 3190 V 690"></path>
+                    <path d="M 3070 650 H 3400 V 690"></path>
+
+                    <path class="ops-loop" d="M 1930 690 V 540 H 1720 V 353"></path>
+
+                    <path d="M 880 746 V 880"></path>
+                    <path d="M 1090 746 V 880"></path>
+                    <path d="M 1510 746 V 880"></path>
+                    <path class="ops-branch" d="M 1720 746 V 850"></path>
+                    <path class="ops-branch" d="M 1676 850 H 1976"></path>
+                    <path d="M 1676 850 V 880"></path>
+                    <path d="M 1826 850 V 880"></path>
+                    <path d="M 1976 850 V 880"></path>
+                    <path class="ops-branch" d="M 1976 922 V 940"></path>
+                    <path class="ops-branch" d="M 1826 940 H 2126"></path>
+                    <path d="M 1826 940 V 960"></path>
+                    <path d="M 1976 940 V 960"></path>
+                    <path d="M 2126 940 V 960"></path>
+                </svg>
+
+                <article class="ops-node ops-node--department node-marketing-okr"><strong>OKR</strong></article>
+                <article class="ops-node ops-node--shared node-design-backlog"><strong>Design backlog</strong></article>
+                <article class="ops-node ops-node--shared node-prd"><strong>PRD</strong></article>
+                <article class="ops-node ops-node--department node-marketing-interview"><strong>Interview / workshop</strong></article>
+                <article class="ops-node ops-node--department node-marketing-user-test"><strong>User test</strong></article>
+
+                <article class="ops-node ops-node--department node-cs-flagged"><strong>Flagged problems</strong></article>
+                <article class="ops-node ops-node--department node-user-behaviours"><strong>User behaviours</strong></article>
+                <article class="ops-node ops-node--department node-cs-interview"><strong>Interview / workshop</strong></article>
+                <article class="ops-node ops-node--department node-cs-user-test"><strong>User test</strong></article>
+
+                <article class="ops-node ops-node--department node-visual-baseline"><strong>Visual baseline / assets</strong></article>
+
+                <article class="ops-node ops-node--department node-flow-alignment"><strong>Flow alignment</strong></article>
+                <article class="ops-node ops-node--department node-system-alignment"><strong>Design system alignment</strong></article>
+                <article class="ops-node ops-node--department node-dev-deployment"><strong>Dev deployment</strong></article>
+
+                <article class="ops-node node-business-goals"><strong>Business goals</strong></article>
+                <article class="ops-node node-user-problems"><strong>User problems</strong></article>
+                <article class="ops-node node-design-brief"><strong>Design brief</strong></article>
+                <article class="ops-node node-ux-audit"><strong>UX audit</strong></article>
+                <article class="ops-node node-ux-research"><strong>UX research</strong></article>
+                <article class="ops-node ops-node--shared node-insights"><strong>Insights</strong></article>
+                <article class="ops-node node-ux-design"><strong>UX design</strong></article>
+                <article class="ops-node node-usability"><strong>Usability testing</strong></article>
+                <article class="ops-node ops-node--shared node-iteration"><strong>Iteration</strong></article>
+                <article class="ops-node node-design-execution"><strong>Design execution</strong></article>
+                <article class="ops-node ops-node--shared node-design-qa"><strong>Design QA</strong></article>
+                <article class="ops-node node-accessibility"><strong>Accessibility check</strong></article>
+                <article class="ops-node node-ab-testing"><strong>UX A/B testing</strong></article>
+                <article class="ops-node node-design-follow-up"><strong>Design follow-up</strong></article>
+
+                <div class="ops-output output-design-brief"><span>Design brief</span></div>
+                <div class="ops-output output-audit"><span>Audit report</span></div>
+                <div class="ops-output output-research"><span>Research report</span></div>
+                <div class="ops-output output-prototype"><span>Hi-fi prototype</span></div>
+                <div class="ops-output output-user-flow"><span>User flow</span></div>
+                <div class="ops-output output-design-system"><span>Design system</span></div>
+                <div class="ops-output output-components"><span>Components</span></div>
+                <div class="ops-output output-typography"><span>Typography</span></div>
+                <div class="ops-output output-color"><span>Color</span></div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+
+    <section class="ux-research-panel" data-practice-panel="ux-research" aria-labelledby="ux-research-title" hidden>
+        <div class="research-heading">
+            <h2 id="ux-research-title">UX Research</h2>
+        </div>
+
+        <section class="research-objective" aria-labelledby="research-objective-title">
+            <h3 id="research-objective-title">Objective</h3>
+            <p>Build a comprehensive understanding of business goals, user needs, and contextual factors. Deeply empathize with users—both internal stakeholders and external end users—to uncover opportunities and constraints.</p>
+        </section>
+
+        <section class="research-lenses" aria-labelledby="research-lenses-title">
+            <h3 id="research-lenses-title">Research lenses</h3>
+            <div class="research-lenses__grid">
+                <article>
+                    <span>01</span>
+                    <div><h4>Quantitative &amp; Qualitative</h4><p>Combine behavioural data with descriptive evidence to understand both what users do and why.</p></div>
+                </article>
+                <article>
+                    <span>02</span>
+                    <div><h4>Behavioural &amp; Attitudinal</h4><p>Compare observed behaviour with what users think, feel, and say.</p></div>
+                </article>
+                <article>
+                    <span>03</span>
+                    <div><h4>Exploratory &amp; Evaluative</h4><p>Discover unmet needs, then test whether proposed solutions work.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="research-resources" aria-label="Research methods, tools, and contacts">
+            <div class="research-playbook-heading">
+                <h3>My research playbook</h3>
+            </div>
+
+            <section class="research-tool-showcase" aria-labelledby="core-research-tools">
+                <h4 id="core-research-tools">Core tools</h4>
+                <div>
+                    <article>
+                        <span class="research-tool-mark"><img src="https://api.iconify.design/logos:figma.svg" alt="" aria-hidden="true"></span>
+                        <h5>FigJam</h5>
+                        <p>Workshops &amp; mapping</p>
+                        <small>Journey maps · affinity maps · workshop boards</small>
+                    </article>
+                    <article>
+                        <span class="research-tool-mark"><img src="https://api.iconify.design/logos:visual-studio-code.svg" alt="" aria-hidden="true"></span>
+                        <h5>Visual Studio Code</h5>
+                        <p>Meta Persona</p>
+                        <small>Segments · needs · behavioural context</small>
+                    </article>
+                    <article>
+                        <span class="research-tool-mark"><img src="https://api.iconify.design/logos:google-analytics.svg" alt="" aria-hidden="true"></span>
+                        <h5>Google Analytics</h5>
+                        <p>Behavioural data</p>
+                        <small>Funnels · events · traffic · conversion</small>
+                    </article>
+                    <article>
+                        <span class="research-tool-mark"><img src="https://api.iconify.design/arcticons:microsoft-clarity.svg" alt="" aria-hidden="true"></span>
+                        <h5>Microsoft Clarity</h5>
+                        <p>Observed behaviour</p>
+                        <small>Recordings · heatmaps · friction signals</small>
+                    </article>
+                    <article>
+                        <span class="research-tool-mark"><img src="https://api.iconify.design/logos:lighthouse.svg" alt="" aria-hidden="true"></span>
+                        <h5>UX Audit</h5>
+                        <p>Experience review</p>
+                        <small>Issues · severity · opportunities</small>
+                    </article>
+                </div>
+            </section>
+
+            <section class="research-method-guide" aria-labelledby="research-method-guide-title">
+                <h4 id="research-method-guide-title">Choose a method by question</h4>
+                <div>
+                    <article>
+                        <h5>Talk &amp; observe</h5>
+                        <div class="research-method-tags">
+                            <strong>Interviews</strong>
+                            <strong>Field study</strong>
+                            <strong>Target users</strong>
+                        </div>
+                    </article>
+                    <article>
+                        <h5>Align the team</h5>
+                        <div class="research-method-tags">
+                            <strong>Stakeholder map</strong>
+                            <strong>Workshop</strong>
+                        </div>
+                    </article>
+                    <article>
+                        <h5>Measure patterns</h5>
+                        <div class="research-method-tags">
+                            <strong>Survey</strong>
+                            <strong>Data analysis</strong>
+                        </div>
+                    </article>
+                    <article>
+                        <h5>Explore context</h5>
+                        <div class="research-method-tags">
+                            <strong>Desk research</strong>
+                            <strong>Competitor scan</strong>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <div class="research-contacts">
+                <h3>Research contacts</h3>
+                <p>Product Owner · End users · Marketing team · External users</p>
+            </div>
+        </section>
+
+        <section class="research-metadata" aria-labelledby="research-metadata-title">
+            <div class="research-metadata__heading">
+                <h3 id="research-metadata-title">Research metadata</h3>
+            </div>
+
+            <article>
+                <h4>Research setup</h4>
+                <ul>
+                    <li>Time and research method, including ad-hoc feedback</li>
+                    <li>Participants: audience, number, and recruitment source</li>
+                    <li>Researcher and contributors</li>
+                </ul>
+            </article>
+            <article>
+                <h4>Product facts</h4>
+                <ul>
+                    <li>Product, relevant feature, and project</li>
+                    <li>Impacted personas and user journeys</li>
+                    <li>Links to relevant past research</li>
+                    <li>Decision status: research, opportunity, design, collaboration, user stories, or implementation</li>
+                    <li>Owner responsible for monitoring the outcome</li>
+                </ul>
+            </article>
+            <article>
+                <h4>Research analysis</h4>
+                <ul>
+                    <li>Size and impact of the problem</li>
+                    <li>Sentiment: negative, neutral, or positive</li>
+                    <li>Relevant company value, KPI, and business impact</li>
+                    <li>Observed facts, key insights, and opportunities</li>
+                </ul>
+            </article>
+            <article>
+                <h4>Reader targeting</h4>
+                <ul>
+                    <li>Interested parties, target audience, and readers</li>
+                    <li>Required level of detail, from fine-grained to high-level</li>
+                </ul>
+            </article>
+        </section>
+    </section>
+
+    <section class="ux-design-panel" data-practice-panel="ux-design" aria-labelledby="ux-design-brief-title" hidden>
+        <div class="brief-heading">
+            <h2 id="ux-design-brief-title">UX Design</h2>
+        </div>
+
+        <section class="research-objective ux-design-objective" aria-label="UX Design objective">
+            <h3>Objective</h3>
+            <p>Translate insights into actionable design directions. Explore and refine possible solutions collaboratively, balancing user needs with business and technical constraints.</p>
+        </section>
+
+        <section class="brief-visuals" aria-label="How the brief supports design decisions">
+            <article class="brief-timeline-card">
+                <div class="brief-visual-heading">
+                    <span>Timeline</span>
+                    <h3>From kickoff to handoff</h3>
+                </div>
+                <ol class="project-timeline" data-design-timeline>
+                    <li><button class="is-active" type="button" data-timeline-step="kickoff" aria-pressed="true"><span>01</span><strong>Kickoff</strong></button></li>
+                    <li><button type="button" data-timeline-step="research" aria-pressed="false"><span>02</span><strong>Research</strong></button></li>
+                    <li><button type="button" data-timeline-step="first-review" aria-pressed="false"><span>03</span><strong>First Review</strong></button></li>
+                    <li><button type="button" data-timeline-step="prototype" aria-pressed="false"><span>04</span><strong>Prototype Ready</strong></button></li>
+                    <li><button type="button" data-timeline-step="testing" aria-pressed="false"><span>05</span><strong>Usability Testing</strong></button></li>
+                    <li><button type="button" data-timeline-step="approval" aria-pressed="false"><span>06</span><strong>Final Approval</strong></button></li>
+                    <li><button type="button" data-timeline-step="handoff" aria-pressed="false"><span>07</span><strong>Dev Handoff</strong></button></li>
+                    <li><button type="button" data-timeline-step="ab-testing" aria-pressed="false"><span>08</span><strong>A/B Testing</strong></button></li>
+                    <li><button type="button" data-timeline-step="follow-up" aria-pressed="false"><span>09</span><strong>Follow-up</strong></button></li>
+                </ol>
+                <article class="timeline-detail-card" data-timeline-detail aria-live="polite">
+                    <header class="timeline-detail-card__header">
+                        <span class="material-symbols-outlined" aria-hidden="true">flag</span>
+                        <h4 data-timeline-title>Kickoff</h4>
+                    </header>
+                    <div class="timeline-detail-card__grid">
+                        <section>
+                            <div class="timeline-detail-card__label">
+                                <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+                                <strong>Align with</strong>
+                            </div>
+                            <div class="timeline-detail-card__items timeline-detail-card__items--parties" data-timeline-parties></div>
+                        </section>
+                        <section>
+                            <div class="timeline-detail-card__label">
+                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                <strong>Tools</strong>
+                            </div>
+                            <div class="timeline-detail-card__items timeline-detail-card__items--tools" data-timeline-tools></div>
+                        </section>
+                        <section>
+                            <div class="timeline-detail-card__label">
+                                <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
+                                <strong>Output</strong>
+                            </div>
+                            <div class="timeline-detail-card__items timeline-detail-card__items--output" data-timeline-output></div>
+                        </section>
+                    </div>
+                </article>
+            </article>
+        </section>
+
+        <section class="brief-carousel" data-brief-carousel aria-labelledby="brief-carousel-title">
+            <div class="brief-carousel__header">
+                <div>
+                    <h3 id="brief-carousel-title">Design brief</h3>
+                </div>
+                <div class="brief-carousel__controls">
+                    <button type="button" data-brief-previous aria-label="Previous brief topic"><span class="material-symbols-outlined" aria-hidden="true">chevron_left</span></button>
+                    <button type="button" data-brief-next aria-label="Next brief topic"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></button>
+                </div>
+            </div>
+
+        <div class="brief-guide" data-brief-track>
+            <article class="brief-explainer brief-explainer--wide">
+                <header><span>01</span><h3>Project Overview</h3></header>
+                <p class="brief-explainer__summary">This gives someone enough context to understand the project without attending every previous conversation.</p>
+                <div class="brief-explainer__content">
+                    <div>
+                        <h4>It should explain</h4>
+                        <ul>
+                            <li><strong>What:</strong> a two- or three-sentence summary of the experience being changed.</li>
+                            <li><strong>Why:</strong> the trigger, such as complaints, a launch, or weak conversion.</li>
+                            <li><strong>Where:</strong> the affected platform—Web, Mobile Web, iOS, Email, or another channel.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="brief-explainer">
+                <header><span>02</span><h3>Business Goals &amp; OKRs</h3></header>
+                <p class="brief-explainer__summary">A strong brief separates the business outcome from the task the user is trying to complete.</p>
+                <h4>Make three things explicit</h4>
+                <ul>
+                    <li><strong>Business Goal:</strong> the metric the company wants to move.</li>
+                    <li><strong>User Goal:</strong> what the customer needs to achieve.</li>
+                    <li><strong>Success:</strong> the KPIs and tracking events that will prove the change worked.</li>
+                </ul>
+                <aside><span>Example</span><p>Increase Add-to-Cart by 15% while helping users identify the right product with less uncertainty.</p></aside>
+            </article>
+
+            <article class="brief-explainer">
+                <header><span>03</span><h3>UX Research</h3></header>
+                <p class="brief-explainer__summary">Show which decisions are supported by evidence and which assumptions still need validation.</p>
+                <h4>Clarify</h4>
+                <ul>
+                    <li>What existing interviews, analytics, audits, or complaints already tell us.</li>
+                    <li>The hypothesis the team intends to test.</li>
+                    <li>Whether Discovery Research is needed before designing—and what it must uncover.</li>
+                </ul>
+                <aside><span>Example hypothesis</span><p>If ingredients are grouped by benefit, users will feel more confident choosing a product.</p></aside>
+            </article>
+
+            <article class="brief-explainer">
+                <header><span>04</span><h3>Target Audience</h3></header>
+                <p class="brief-explainer__summary">“Everyone” is not a useful audience. Name the specific group whose behaviour should change.</p>
+                <h4>Describe</h4>
+                <ul>
+                    <li>The segment: new users, returning VIPs, acne-prone customers, or another defined group.</li>
+                    <li>Their current mindset, context, and problem.</li>
+                </ul>
+                <aside><span>Example</span><p>New skincare customers who feel overwhelmed by choice and do not know which product suits their needs.</p></aside>
+            </article>
+
+            <article class="brief-explainer">
+                <header><span>05</span><h3>Scope &amp; Deliverables</h3></header>
+                <p class="brief-explainer__summary">Scope makes the expected outcome concrete and prevents adjacent requests from quietly expanding the project.</p>
+                <h4>Confirm</h4>
+                <ul>
+                    <li>Required outputs: low-fi wireframes, a high-fi Figma prototype, or dev-ready specifications.</li>
+                    <li>What is explicitly out of scope.</li>
+                    <li>Whether usability testing is needed and what must be tested.</li>
+                </ul>
+                <aside><span>Out-of-scope example</span><p>The sprint improves the product page; it does not redesign the header navigation.</p></aside>
+            </article>
+
+            <article class="brief-explainer">
+                <header><span>06</span><h3>Content &amp; Assets</h3></header>
+                <p class="brief-explainer__summary">Design cannot be final when the inputs are unknown. Link the source of truth for every required asset.</p>
+                <h4>Include</h4>
+                <ul>
+                    <li>The approved copy document.</li>
+                    <li>Creative assets and product visuals.</li>
+                    <li>The relevant design-system library and brand guidance.</li>
+                </ul>
+            </article>
+
+            <article class="brief-explainer">
+                <header><span>07</span><h3>Technical Constraints &amp; Dependencies</h3></header>
+                <p class="brief-explainer__summary">Constraints are design inputs. Recording them early prevents a solution that cannot be built.</p>
+                <h4>Surface</h4>
+                <ul>
+                    <li>API, platform, Shopify, Salesforce, or performance limitations.</li>
+                    <li>Feasibility decisions required from development agencies.</li>
+                    <li>Approvals, data, or upstream work the project is waiting on.</li>
+                </ul>
+            </article>
+
+        </div>
+
+            <div class="brief-carousel__dots" aria-label="Choose a brief topic">
+                <button class="is-active" type="button" data-brief-dot="0" aria-label="Show topic 1" aria-current="true"></button>
+                <button type="button" data-brief-dot="1" aria-label="Show topic 2"></button>
+                <button type="button" data-brief-dot="2" aria-label="Show topic 3"></button>
+                <button type="button" data-brief-dot="3" aria-label="Show topic 4"></button>
+                <button type="button" data-brief-dot="4" aria-label="Show topic 5"></button>
+                <button type="button" data-brief-dot="5" aria-label="Show topic 6"></button>
+                <button type="button" data-brief-dot="6" aria-label="Show topic 7"></button>
+            </div>
+        </section>
+    </section>
+
+    <section class="handoff-panel" data-practice-panel="handoff" aria-labelledby="handoff-title" hidden>
+        <div class="handoff-heading">
+            <h2 id="handoff-title">Design Handoff</h2>
+        </div>
+
+        <section class="handoff-package" aria-labelledby="handoff-package-title">
+            <div class="handoff-section-heading">
+                <h3 id="handoff-package-title">Delivery package</h3>
+            </div>
+            <div class="handoff-package__grid">
+                <article>
+                    <span>01</span>
+                    <h4>Design context</h4>
+                    <p>Problem statement, business logic, user needs, success measures, assumptions, and the reason behind key decisions.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h4>User flows</h4>
+                    <p>Task paths, linked screens, entry and exit points, alternate routes, empty states, errors, and edge cases.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h4>Screen specifications</h4>
+                    <p>Layouts, spacing, responsive breakpoints, interaction states, copy, validation rules, accessibility, and expected behaviour.</p>
+                </article>
+                <article>
+                    <span>04</span>
+                    <h4>Assets &amp; motion</h4>
+                    <p>Production-ready images, icons, animation files, motion guidance, and clear naming for every exported asset.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="handoff-system" aria-labelledby="handoff-system-title">
+            <div>
+                <h3 id="handoff-system-title">Design system + JSON</h3>
+                <p>The Figma component library is the visual source of truth. The matching JSON file carries reusable tokens into development so colour, typography, spacing, radius, and component decisions stay consistent in code.</p>
+                <ul>
+                    <li><strong>Component library:</strong> components, variants, states, patterns, and usage guidance.</li>
+                    <li><strong>Design tokens:</strong> shared names and values for foundations used by both design and code.</li>
+                    <li><strong>JSON export:</strong> a versioned, machine-readable handoff for web and app implementation.</li>
+                </ul>
+            </div>
+            <pre aria-label="Example design token JSON"><code>{
+  "color": { "brand": "…" },
+  "typography": { "body": "…" },
+  "spacing": { "md": "…" },
+  "radius": { "button": "…" }
+}</code></pre>
+        </section>
+
+        <section class="handoff-qa" aria-labelledby="handoff-qa-title">
+            <div class="handoff-section-heading">
+                <h3 id="handoff-qa-title">Design QA review</h3>
+            </div>
+            <div class="handoff-qa__grid">
+                <article>
+                    <h4>Visual consistency</h4>
+                    <ul><li>Colours, fonts, spacing, alignment, and layout match the approved design.</li></ul>
+                </article>
+                <article>
+                    <h4>Typography</h4>
+                    <ul><li>Correct styles, line spacing, alignment, wrapping, and truncation are used.</li></ul>
+                </article>
+                <article>
+                    <h4>Colour &amp; contrast</h4>
+                    <ul><li>Tokens are used consistently and contrast meets accessibility requirements.</li></ul>
+                </article>
+                <article>
+                    <h4>Images &amp; icons</h4>
+                    <ul><li>Assets are sharp, correctly scaled, consistent, and exported in the right format.</li></ul>
+                </article>
+                <article>
+                    <h4>Interactions &amp; animations</h4>
+                    <ul><li>Hover, focus, active, loading, transition, drag, and motion behaviours work as documented.</li></ul>
+                </article>
+                <article>
+                    <h4>Responsiveness</h4>
+                    <ul><li>Layouts resize and reposition correctly across supported screens, browsers, and devices.</li></ul>
+                </article>
+                <article>
+                    <h4>Functionality</h4>
+                    <ul><li>Navigation, form validation, errors, and micro-interactions behave as expected.</li></ul>
+                </article>
+                <article>
+                    <h4>Accessibility</h4>
+                    <ul><li>Alt text, labels, captions, zoom, keyboard navigation, focus order, and screen readers are supported.</li></ul>
+                </article>
+                <article>
+                    <h4>Content</h4>
+                    <ul><li>Final copy replaces placeholders and terminology is accurate and consistent.</li></ul>
+                </article>
+            </div>
+        </section>
+    </section>
+</section>
 
 <!-- Footer -->
 <footer class="bg-surface-container-low w-full py-12">
     <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-6 md:space-y-0">
-        <span class="font-display text-on-surface-variant text-2xl brand-mark">korean skincare</span>
+        <img src="./assets/logos/korean-skincare-figma.svg" alt="Korean Skincare"/>
         <p class="font-body-md text-caption text-on-surface-variant/80">
-            © 2026 korean skincare UX Research by Yani Wang. All rights reserved.
+            © 2026 Korean Skincare UX Cookbook. All rights reserved.
         </p>
     </div>
 </footer>
-
-<!-- Scroll to Top -->
-<button id="scroll-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-smooth z-40" aria-label="Scroll to top">
-    <span class="material-symbols-outlined">expand_less</span>
-</button>
-
-<script src="./js/prototype.js" onerror="document.documentElement.classList.add('site-scripts-missing')"></script>
-<script src="./js/main.js" onerror="document.documentElement.classList.add('site-scripts-missing')"></script>
+<script src="./js/home.js?v=20260923-10"></script>
 </body>
 </html>

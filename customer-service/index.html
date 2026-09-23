@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Customer Service × UX | UX Cookbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&amp;family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="../css/design-tokens.css" rel="stylesheet"/>
+    <link href="../css/customer-service.css" rel="stylesheet"/>
+</head>
+<body class="cs-page">
+    <header class="cs-header">
+        <a href="../" class="ks-logo-link" aria-label="UX Cookbook home">
+            <img src="../assets/logos/korean-skincare-figma.svg" alt="Korean Skincare"/>
+        </a>
+        <a href="../" class="back-link">
+            <span class="plain-chevron material-symbols-outlined" aria-hidden="true">chevron_left</span>
+            Back to cookbook
+        </a>
+    </header>
+
+    <main>
+        <section class="cs-hero" aria-labelledby="cs-title">
+            <h1 id="cs-title">Customer Service × UX</h1>
+            <p>Customer Service hears where the experience breaks first. A consistent feedback loop helps UX turn repeated complaints, customer language, and severity signals into better product decisions.</p>
+        </section>
+
+        <section class="cs-section meeting-section" aria-labelledby="meeting-title">
+            <h2 id="meeting-title">Meeting type</h2>
+            <a class="meeting-card" href="https://docs.google.com/document/d/1cBLwv8lQmU2oTAZUmurKXdZweJyW0ojQlrRDgg2iKQ0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined" aria-hidden="true">event_repeat</span>
+                <div class="meeting-card__copy">
+                    <h3>Bi-weekly check-in</h3>
+                    <p>Recurring questions, complaint frequency, customer impact, and supporting evidence.</p>
+                </div>
+                <div class="meeting-card__meta">
+                    <span>Every two weeks</span>
+                    <span class="plain-chevron material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                </div>
+            </a>
+        </section>
+
+        <section class="cs-section handoff-section" aria-labelledby="handoff-title">
+            <div class="section-heading handoff-heading">
+                <div>
+                    <h2 id="handoff-title">CS insight handoff</h2>
+                </div>
+            </div>
+
+            <nav class="handoff-tabs" role="tablist" aria-label="CS insight handoff views">
+                <button class="handoff-tab is-active" id="handoff-tab-new" type="button" role="tab" aria-selected="true" aria-controls="handoff-panel-new" data-handoff-tab="new">New insight</button>
+                <button class="handoff-tab" id="handoff-tab-history" type="button" role="tab" aria-selected="false" aria-controls="handoff-panel-history" data-handoff-tab="history">History</button>
+            </nav>
+
+            <form class="handoff-form handoff-panel" id="handoff-panel-new" role="tabpanel" aria-labelledby="handoff-tab-new" data-handoff-panel="new" data-cs-form>
+                <label class="form-honeypot" aria-hidden="true">
+                    <span>Website</span>
+                    <input name="website" type="text" tabindex="-1" autocomplete="off"/>
+                </label>
+                <div class="form-grid">
+                    <label>
+                        <span>Question or complaint</span>
+                        <input name="issue" type="text" required placeholder="e.g. Wishlist disappeared after login"/>
+                    </label>
+                    <label>
+                        <span>Business goal</span>
+                        <select name="businessGoal" required>
+                            <option value="">Select an area</option>
+                            <option>Search / discovery</option>
+                            <option>Promotions</option>
+                            <option>Account / login</option>
+                            <option>Checkout / payment</option>
+                            <option>Shipping</option>
+                            <option>Returns / refunds</option>
+                            <option>Product usage</option>
+                            <option>Repeat purchase</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Frequency</span>
+                        <select name="frequency" required>
+                            <option value="">Select frequency</option>
+                            <option>Isolated</option>
+                            <option>Occasional</option>
+                            <option>Frequent</option>
+                            <option>Constant</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Suggested severity</span>
+                        <select name="severity" required>
+                            <option value="">Select severity</option>
+                            <option>Low</option>
+                            <option>Medium</option>
+                            <option>High</option>
+                            <option>Critical</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label>
+                    <span>Severity reason</span>
+                    <textarea name="severityReason" rows="3" required placeholder="Why does this severity make sense?"></textarea>
+                </label>
+                <label>
+                    <span>Example quotations / notes</span>
+                    <textarea name="quotation" rows="3" placeholder="Paste customer questions or quotations"></textarea>
+                </label>
+                <label>
+                    <span>User goals / expected behaviour</span>
+                    <textarea name="userGoal" rows="3" placeholder="What was the customer trying to achieve?"></textarea>
+                </label>
+
+                <label class="file-drop" data-file-drop>
+                    <input name="files" type="file" multiple accept=".png,.jpg,.jpeg,.webp,.gif,.heic,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.csv"/>
+                    <span class="material-symbols-outlined" aria-hidden="true">upload_file</span>
+                    <strong>Upload example quotations, documents, or screenshots</strong>
+                    <small>Select multiple images, PDFs, documents, spreadsheets, presentations, or text files</small>
+                    <span class="file-selection" data-file-selection>No files selected</span>
+                </label>
+
+                <div class="form-actions">
+                    <p data-form-status aria-live="polite"></p>
+                    <button type="submit">Add to history</button>
+                </div>
+            </form>
+
+            <div class="history-section handoff-panel" id="handoff-panel-history" role="tabpanel" aria-labelledby="handoff-tab-history" data-handoff-panel="history" hidden>
+                <div class="auth-panel" data-auth-panel>
+                    <div class="auth-signed-out" data-auth-signed-out>
+                        <div>
+                            <h3>Private history</h3>
+                            <p>CS can upload without signing in. Use your approved UX email to view and download submissions.</p>
+                        </div>
+                        <form class="auth-form" data-auth-form>
+                            <label>
+                                <span>Email address</span>
+                                <input name="email" type="email" autocomplete="email" required placeholder="name@company.com"/>
+                            </label>
+                            <button type="submit">Send link</button>
+                        </form>
+                    </div>
+                    <div class="auth-signed-in" data-auth-signed-in hidden>
+                        <p>Signed in as <strong data-auth-email></strong></p>
+                        <button type="button" data-auth-sign-out>Sign out</button>
+                    </div>
+                    <p class="auth-status" data-auth-status aria-live="polite"></p>
+                </div>
+
+                <div data-history-gate hidden>
+                    <div class="history-heading">
+                        <div>
+                            <h3>Upload history</h3>
+                            <p>Entries and files are shared across authorized devices.</p>
+                        </div>
+                        <button type="button" class="secondary-button" data-export-history>Download history</button>
+                    </div>
+                    <div class="history-list" data-history-list>
+                        <div class="history-empty" data-history-empty>
+                            <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
+                            <p>No CS insights have been uploaded yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section cs-workflow-section" aria-labelledby="cs-workflow-title">
+            <div class="workflow-heading">
+                <h2 id="cs-workflow-title">Workflow</h2>
+                <p>Customer Service brings flagged problems and customer evidence. UX turns those signals into validated insights, design decisions, and execution.</p>
+            </div>
+
+            <div class="workflow-scroll" tabindex="0" aria-label="Scrollable Customer Service and UX workflow">
+                <div class="workflow-canvas" role="img" aria-label="Customer Service flagged problems and the UX design brief create user behaviours, followed by a UX audit, research, insights, UX design, usability testing, iteration, and design execution.">
+                    <div class="workflow-lane workflow-lane--cs" aria-hidden="true"></div>
+                    <div class="workflow-lane workflow-lane--ux" aria-hidden="true"></div>
+                    <div class="workflow-lane workflow-lane--outputs" aria-hidden="true"></div>
+
+                    <div class="workflow-lane-label workflow-lane-label--cs">
+                        <span>Input</span>
+                        <strong>Customer Service</strong>
+                    </div>
+                    <div class="workflow-lane-label workflow-lane-label--ux">
+                        <strong>UX Design</strong>
+                    </div>
+                    <div class="workflow-lane-label workflow-lane-label--outputs">
+                        <span>Output</span>
+                    </div>
+
+                    <svg class="workflow-connectors" viewBox="0 0 1870 690" aria-hidden="true" focusable="false">
+                        <defs>
+                            <marker id="cs-workflow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                            </marker>
+                        </defs>
+
+                        <path class="workflow-branch" d="M 310 128 H 330 V 214"></path>
+                        <path class="workflow-branch" d="M 310 358 H 330 V 214"></path>
+                        <path d="M 330 214 H 370"></path>
+                        <path d="M 500 214 H 510 V 358 H 550"></path>
+                        <path d="M 615 386 V 596"></path>
+                        <path d="M 680 358 H 720"></path>
+                        <path class="workflow-branch" d="M 850 128 H 870 V 214"></path>
+                        <path class="workflow-branch" d="M 850 358 H 870 V 214"></path>
+                        <path d="M 870 214 H 910"></path>
+                        <path d="M 975 242 V 596"></path>
+                        <path d="M 1040 214 H 1050 V 358 H 1090"></path>
+                        <path d="M 1220 358 H 1260"></path>
+                        <path class="workflow-branch" d="M 1390 128 H 1410 V 358"></path>
+                        <path class="workflow-branch" d="M 1390 358 H 1410"></path>
+                        <path d="M 1410 358 H 1450"></path>
+                        <path d="M 1580 358 H 1620"></path>
+                        <path d="M 1750 358 H 1790"></path>
+                        <path class="workflow-loop" d="M 1515 386 V 500 H 1155"></path>
+                        <path class="workflow-branch" d="M 1155 386 V 520"></path>
+                        <path class="workflow-branch" d="M 1135 520 H 1455"></path>
+                        <path d="M 1135 520 V 596"></path>
+                        <path d="M 1295 520 V 596"></path>
+                        <path d="M 1455 520 V 596"></path>
+                    </svg>
+
+                    <article class="workflow-node workflow-node--cs node-flagged-problems"><strong>Flagged problems</strong></article>
+                    <article class="workflow-node workflow-node--ux node-design-brief"><strong>Design brief</strong></article>
+                    <article class="workflow-node workflow-node--shared node-user-behaviours"><strong>User behaviours</strong></article>
+                    <article class="workflow-node workflow-node--ux node-ux-audit"><strong>UX audit</strong></article>
+                    <article class="workflow-node workflow-node--ux node-ux-research"><strong>UX research</strong></article>
+                    <article class="workflow-node workflow-node--cs node-interview"><strong>Interview / workshop</strong></article>
+                    <article class="workflow-node workflow-node--shared node-insights"><strong>Insights</strong></article>
+                    <article class="workflow-node workflow-node--ux node-ux-design"><strong>UX design</strong></article>
+                    <article class="workflow-node workflow-node--cs node-user-test"><strong>User test</strong></article>
+                    <article class="workflow-node workflow-node--ux node-usability"><strong>Usability testing</strong></article>
+                    <article class="workflow-node workflow-node--ux node-iteration"><strong>Iteration</strong></article>
+                    <article class="workflow-node workflow-node--ux node-design-execution"><strong>Design execution</strong></article>
+                    <div class="workflow-continues" aria-label="The workflow continues"><span></span><span></span><span></span></div>
+
+                    <div class="workflow-output output-audit"><span>Audit report</span></div>
+                    <div class="workflow-output output-research"><span>Research report</span></div>
+                    <div class="workflow-output output-prototype"><span>Hi-fi prototype</span></div>
+                    <div class="workflow-output output-user-flow"><span>User flow</span></div>
+                    <div class="workflow-output output-design-system"><span>Design system</span></div>
+                </div>
+            </div>
+            <p class="workflow-hint"><span class="material-symbols-outlined" aria-hidden="true">swipe</span> Scroll horizontally to follow the full workflow</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="../">UX COOKBOOK</a>
+        <span>Customer Service × UX</span>
+    </footer>
+
+    <script type="module" src="../js/customer-service.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Creative × UX | UX Cookbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&amp;family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="../css/design-tokens.css" rel="stylesheet"/>
+    <link href="../css/creative.css" rel="stylesheet"/>
+</head>
+<body class="creative-page">
+    <header class="creative-header">
+        <a href="../" class="ks-logo-link" aria-label="UX Cookbook home">
+            <img src="../assets/logos/korean-skincare-figma.svg" alt="Korean Skincare"/>
+        </a>
+        <a href="../" class="back-link">
+            <span class="plain-chevron material-symbols-outlined" aria-hidden="true">chevron_left</span>
+            Back to cookbook
+        </a>
+    </header>
+
+    <main>
+        <section class="creative-hero" aria-labelledby="creative-title">
+            <h1 id="creative-title">Creative × UX</h1>
+            <p>Creative defines the brand language. UX turns it into a system that works consistently across experiences and domains, while creating reusable Figma assets that help Creative move faster.</p>
+        </section>
+
+        <section class="creative-workflow-section" aria-labelledby="creative-workflow-title">
+            <h2 id="creative-workflow-title">Workflow</h2>
+
+            <div class="workflow-scroll" tabindex="0" aria-label="Scrollable Creative and UX workflow">
+                <div class="workflow-canvas" role="img" aria-label="Creative produces the visual baseline and assets. UX turns them into reusable components, typography, and color, checks accessibility, and sends feedback to Creative.">
+                    <div class="workflow-lane workflow-lane--creative" aria-hidden="true"></div>
+                    <div class="workflow-lane workflow-lane--ux" aria-hidden="true"></div>
+                    <div class="workflow-lane workflow-lane--outputs" aria-hidden="true"></div>
+
+                    <div class="workflow-lane-label workflow-lane-label--creative">
+                        <span>Input</span>
+                        <strong>Creative</strong>
+                    </div>
+                    <div class="workflow-lane-label workflow-lane-label--ux">
+                        <strong>UX Design</strong>
+                    </div>
+                    <div class="workflow-lane-label workflow-lane-label--outputs">
+                        <span>Output</span>
+                    </div>
+
+                    <svg class="workflow-connectors" viewBox="0 0 1180 690" aria-hidden="true" focusable="false">
+                        <defs>
+                            <marker id="creative-workflow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                            </marker>
+                        </defs>
+                        <path d="M 410 128 H 450 V 358 H 500"></path>
+                        <path d="M 630 358 H 770"></path>
+                        <path class="workflow-loop" d="M 835 330 V 70 H 345 V 100"></path>
+                        <path class="workflow-branch" d="M 565 386 V 520"></path>
+                        <path class="workflow-branch" d="M 470 520 H 850"></path>
+                        <path d="M 470 520 V 596"></path>
+                        <path d="M 660 520 V 596"></path>
+                        <path d="M 850 520 V 596"></path>
+                    </svg>
+
+                    <article class="workflow-node workflow-node--creative node-visual-baseline">
+                        <strong>Visual baseline / assets</strong>
+                    </article>
+
+                    <article class="workflow-node workflow-node--ux node-reusable-foundations">
+                        <strong>Reusable foundations</strong>
+                    </article>
+
+                    <article class="workflow-node workflow-node--ux node-accessibility">
+                        <strong>Accessibility check</strong>
+                    </article>
+
+                    <span class="feedback-label">Feedback</span>
+
+                    <div class="workflow-output output-components"><span>Components</span></div>
+                    <div class="workflow-output output-typography"><span>Typography</span></div>
+                    <div class="workflow-output output-color"><span>Color</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="figma-guide-section" aria-labelledby="figma-guide-title">
+            <div class="guide-heading">
+                <h2 id="figma-guide-title">How to use the Figma library</h2>
+                <p>Use these steps to build with the shared brand foundations instead of recreating assets from scratch.</p>
+            </div>
+
+            <div class="guide-list">
+                <article class="guide-step">
+                    <div class="guide-step__copy">
+                        <span class="guide-step__number">01</span>
+                        <h3>Add components</h3>
+                        <ol class="guide-instructions">
+                            <li>Open <strong>Assets</strong> in Figma’s left sidebar and click the small <strong>Library</strong> book icon.</li>
+                            <li>Open <strong>Manage libraries</strong>, go to <strong>Teams</strong>, then hover over <strong>Component Library</strong> and click <strong>Add to file</strong>. Repeat this for <strong>Tokens</strong>.</li>
+                            <li>In any design file, return to <strong>Assets</strong> and open the Component Library.</li>
+                            <li>Open <strong>Buttons</strong> and start with <strong>Visual btn</strong>, or browse the library for another component.</li>
+                        </ol>
+                    </div>
+
+                    <figure class="guide-placeholder">
+                        <div class="guide-carousel" data-guide-carousel tabindex="0" aria-label="Component setup screenshots">
+                            <button class="guide-carousel__arrow guide-carousel__arrow--previous" type="button" data-carousel-previous aria-label="Previous screenshot">
+                                <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+                            </button>
+
+                            <div class="guide-carousel__viewport">
+                                <a class="guide-carousel__slide" href="../assets/creative/figma-manage-libraries.png" target="_blank" rel="noopener noreferrer" data-carousel-slide>
+                                    <img src="../assets/creative/figma-manage-libraries.png" alt="Figma Assets panel showing Manage libraries, Teams, Component Library, and Tokens" loading="lazy"/>
+                                </a>
+                                <a class="guide-carousel__slide" href="../assets/creative/figma-add-to-file.png" target="_blank" rel="noopener noreferrer" data-carousel-slide hidden>
+                                    <img src="../assets/creative/figma-add-to-file.png" alt="Figma library card showing the Add to file action" loading="lazy"/>
+                                </a>
+                                <a class="guide-carousel__slide" href="../assets/creative/figma-component-library.png" target="_blank" rel="noopener noreferrer" data-carousel-slide hidden>
+                                    <img src="../assets/creative/figma-component-library.png" alt="Figma Assets panel with the Component Library available" loading="lazy"/>
+                                </a>
+                                <a class="guide-carousel__slide" href="../assets/creative/figma-visual-button.png" target="_blank" rel="noopener noreferrer" data-carousel-slide hidden>
+                                    <img src="../assets/creative/figma-visual-button.png" alt="Figma Component Library opened to Buttons and Visual btn" loading="lazy"/>
+                                </a>
+                            </div>
+
+                            <button class="guide-carousel__arrow guide-carousel__arrow--next" type="button" data-carousel-next aria-label="Next screenshot">
+                                <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                            </button>
+
+                            <div class="guide-carousel__dots" aria-label="Choose screenshot">
+                                <button class="is-active" type="button" data-carousel-dot="0" aria-label="Show screenshot 1" aria-current="true"></button>
+                                <button type="button" data-carousel-dot="1" aria-label="Show screenshot 2"></button>
+                                <button type="button" data-carousel-dot="2" aria-label="Show screenshot 3"></button>
+                                <button type="button" data-carousel-dot="3" aria-label="Show screenshot 4"></button>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+
+                <article class="guide-step">
+                    <div class="guide-step__copy">
+                        <span class="guide-step__number">02</span>
+                        <h3>Change color</h3>
+                        <ol class="guide-instructions">
+                            <li>Select the layer you want to update.</li>
+                            <li>In the right sidebar, find <strong>Fill</strong> and open the library selector.</li>
+                            <li>Choose a color from <strong>Tokens</strong>, or search for the token you need.</li>
+                            <li>Use the gradient tokens when the design calls for a gradient.</li>
+                        </ol>
+                    </div>
+
+                    <figure class="guide-placeholder">
+                        <a class="guide-static-image" href="../assets/creative/figma-color-tokens.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/creative/figma-color-tokens.png" alt="Figma Fill library showing Korean Skincare color tokens" loading="lazy"/>
+                        </a>
+                    </figure>
+                </article>
+
+                <article class="guide-step">
+                    <div class="guide-step__copy">
+                        <span class="guide-step__number">03</span>
+                        <h3>Apply typography</h3>
+                        <ol class="guide-instructions">
+                            <li>Select the text layer you want to format.</li>
+                            <li>In the right sidebar, open the shared style selector under <strong>Typography</strong>.</li>
+                            <li>Choose the style by purpose: headings for titles, body styles for reading, and captions for labels.</li>
+                        </ol>
+                    </div>
+
+                    <figure class="guide-placeholder">
+                        <a class="guide-static-image" href="../assets/creative/figma-typography-styles.png" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/creative/figma-typography-styles.png" alt="Figma Typography panel showing Korean Skincare shared text styles" loading="lazy"/>
+                        </a>
+                    </figure>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="../">UX COOKBOOK</a>
+        <span>Creative × UX</span>
+    </footer>
+    <script src="../js/creative.js"></script>
+</body>
+</html>

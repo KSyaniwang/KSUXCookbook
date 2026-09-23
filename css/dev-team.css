@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--color-text-primary);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.dev-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    padding: 16px 20px;
+    background: color-mix(in srgb, var(--color-pink-cloud) 88%, transparent);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-text-default);
+    font-size: var(--type-body-sm-size);
+    line-height: var(--type-body-sm-line);
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--color-pink-500);
+}
+
+.plain-chevron.material-symbols-outlined {
+    padding: 0 !important;
+    border-radius: 0;
+    background: transparent !important;
+    color: inherit !important;
+}
+
+main,
+footer {
+    width: min(100%, 1280px);
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.dev-hero {
+    padding: 88px 0 72px;
+    border-bottom: 1px solid var(--color-border-primary);
+}
+
+.dev-hero h1,
+.dev-workflow-section h2 {
+    margin: 0;
+    font-family: var(--type-family-heading);
+    font-weight: 500;
+}
+
+.dev-hero h1 {
+    font-size: clamp(44px, 7vw, var(--type-h1-size));
+    line-height: 1.1;
+    letter-spacing: var(--type-h1-tracking);
+}
+
+.dev-hero p {
+    max-width: 860px;
+    margin: 24px 0 0;
+    color: var(--color-text-default);
+    font-size: var(--type-body-lg-size);
+    line-height: var(--type-body-lg-line);
+}
+
+.dev-workflow-section {
+    padding: 72px 0 112px;
+}
+
+.dev-workflow-section h2 {
+    margin-bottom: 32px;
+    font-size: var(--type-h2-size);
+    line-height: var(--type-h2-line);
+    letter-spacing: var(--type-h2-tracking);
+}
+
+.workflow-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--color-border-primary);
+    border-radius: 18px;
+    background: var(--color-white);
+    box-shadow: 0 12px 32px color-mix(in srgb, var(--color-grey-1000) 4%, transparent);
+    scrollbar-color: var(--color-pink-ks) transparent;
+    scrollbar-width: thin;
+}
+
+.workflow-scroll:focus-visible {
+    outline: 3px solid var(--color-pink-300);
+    outline-offset: 3px;
+}
+
+.workflow-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.workflow-scroll::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: var(--color-pink-ks);
+}
+
+.workflow-canvas {
+    position: relative;
+    width: max(100%, 1600px);
+    height: 560px;
+    overflow: hidden;
+}
+
+.workflow-lane {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.workflow-lane--dev {
+    top: 0;
+    height: 214px;
+    background: color-mix(in srgb, var(--color-pink-100) 32%, var(--color-white));
+}
+
+.workflow-lane--ux {
+    top: 214px;
+    height: 346px;
+    border-top: 1px solid var(--color-border-primary);
+    background: var(--color-white);
+}
+
+.workflow-lane-label {
+    position: absolute;
+    left: 24px;
+    z-index: 2;
+    display: grid;
+    width: 130px;
+}
+
+.workflow-lane-label--dev {
+    top: 96px;
+}
+
+.workflow-lane-label--ux {
+    top: 340px;
+}
+
+.workflow-lane-label span {
+    color: var(--color-pink-500);
+    font-size: var(--type-caption-lg-size);
+    line-height: var(--type-caption-lg-line);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.workflow-lane-label strong {
+    margin-top: 4px;
+    font-family: var(--type-family-heading);
+    font-size: var(--type-body-lg-size);
+    line-height: var(--type-body-lg-line);
+    font-weight: 500;
+}
+
+.workflow-connectors {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 1600px;
+    height: 560px;
+    pointer-events: none;
+}
+
+.workflow-connectors path {
+    fill: none;
+    stroke: var(--color-grey-1000);
+    stroke-width: 1.5;
+    marker-end: url("#dev-workflow-arrow");
+}
+
+.workflow-connectors marker path {
+    fill: var(--color-grey-1000);
+    stroke: none;
+}
+
+.workflow-connectors .workflow-branch {
+    marker-end: none;
+}
+
+.workflow-connectors .workflow-loop {
+    stroke-dasharray: 5 5;
+}
+
+.workflow-node {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 130px;
+    min-height: 56px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border-primary);
+    border-radius: 10px;
+    background: var(--color-white);
+    box-shadow: 0 5px 14px color-mix(in srgb, var(--color-grey-1000) 6%, transparent);
+}
+
+.workflow-node strong {
+    font-size: var(--type-body-sm-size);
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.workflow-node--dev {
+    border-color: var(--color-pink-ks);
+    background: var(--color-pink-100);
+}
+
+.workflow-node--shared {
+    border-color: var(--color-pink-500);
+    background: var(--color-pink-ks);
+}
+
+.node-ux-design {
+    top: 330px;
+    left: 180px;
+}
+
+.node-flow-alignment {
+    top: 70px;
+    left: 400px;
+}
+
+.node-system-alignment {
+    top: 140px;
+    left: 400px;
+}
+
+.node-iteration {
+    top: 186px;
+    left: 600px;
+}
+
+.node-design-execution {
+    top: 330px;
+    left: 800px;
+}
+
+.node-design-qa {
+    top: 186px;
+    left: 990px;
+}
+
+.node-deployment {
+    top: 100px;
+    left: 1180px;
+}
+
+.node-ab-testing {
+    top: 290px;
+    left: 1400px;
+}
+
+.node-design-follow-up {
+    top: 410px;
+    left: 1400px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--color-border-primary);
+    color: var(--color-text-default);
+    font-size: var(--type-caption-lg-size);
+    line-height: var(--type-caption-lg-line);
+}
+
+footer a {
+    color: var(--color-grey-1000);
+    font-family: var(--type-family-heading);
+    font-size: var(--type-body-lg-size);
+}
+
+footer a:hover {
+    color: var(--color-pink-500);
+}
+
+@media (min-width: 640px) {
+    .dev-header,
+    main,
+    footer {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dev-header,
+    main,
+    footer {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+}
+
+@media (max-width: 680px) {
+    .dev-header {
+        min-height: 82px;
+    }
+
+    .dev-hero {
+        padding: 64px 0 52px;
+    }
+
+    .dev-workflow-section {
+        padding: 52px 0 80px;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

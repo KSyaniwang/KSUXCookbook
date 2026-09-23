@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Marketing × UX | UX Cookbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&amp;family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="../css/design-tokens.css" rel="stylesheet"/>
+    <link href="../css/marketing.css" rel="stylesheet"/>
+</head>
+<body class="marketing-page">
+    <header class="marketing-header">
+        <a href="../" class="ks-logo-link" aria-label="UX Cookbook home">
+            <img src="../assets/logos/korean-skincare-figma.svg" alt="Korean Skincare"/>
+        </a>
+        <a href="../" class="back-link">
+            <span class="plain-chevron material-symbols-outlined" aria-hidden="true">chevron_left</span>
+            Back to cookbook
+        </a>
+    </header>
+
+    <main>
+        <section class="marketing-hero" aria-labelledby="marketing-title">
+            <h1 id="marketing-title">Marketing × UX</h1>
+            <p class="hero-copy">
+                We share exactly the same OKRs. Marketing and UX connect the business goal, the user problem, and the way success is measured, so that the product experience gives them a reason to stay.
+            </p>
+        </section>
+
+        <div class="playbook-panels">
+            <section class="playbook-panel" id="panel-overview">
+                <section class="workflow-section" aria-labelledby="workflow-title">
+                    <div class="workflow-heading">
+                        <div>
+                            <h2 id="workflow-title">Workflow</h2>
+                        </div>
+                        <p>Marketing brings the inputs and customer access. UX turns shared evidence into design outputs, then both teams learn through testing and iteration.</p>
+                    </div>
+
+                    <div class="workflow-scroll" tabindex="0" aria-label="Scrollable Marketing and UX workflow">
+                        <div class="workflow-canvas" role="img" aria-label="Marketing and UX workflow: OKRs, business goals, and user problems form the design backlog and PRD; UX creates a design brief, audit, research, insights, designs, and usability testing with Marketing interviews and user tests; both teams iterate on the design.">
+                            <div class="workflow-lane workflow-lane--marketing" aria-hidden="true"></div>
+                            <div class="workflow-lane workflow-lane--ux" aria-hidden="true"></div>
+                            <div class="workflow-lane workflow-lane--outputs" aria-hidden="true"></div>
+
+                            <div class="workflow-lane-label workflow-lane-label--marketing">
+                                <span>Input</span>
+                                <strong>Marketing</strong>
+                            </div>
+                            <div class="workflow-lane-label workflow-lane-label--ux">
+                                <strong>UX Design</strong>
+                            </div>
+                            <div class="workflow-lane-label workflow-lane-label--outputs">
+                                <span>Output</span>
+                            </div>
+
+                            <svg class="workflow-connectors" viewBox="0 0 2030 690" aria-hidden="true" focusable="false">
+                                <defs>
+                                    <marker id="workflow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                        <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                                    </marker>
+                                </defs>
+
+                                <path d="M 310 128 H 340 V 214 H 370"></path>
+                                <path d="M 310 291 H 340 V 214 H 370"></path>
+                                <path d="M 310 369 H 340 V 214 H 370"></path>
+                                <path d="M 500 214 H 540"></path>
+                                <path d="M 605 242 V 330"></path>
+                                <path d="M 670 358 H 710"></path>
+                                <path d="M 605 386 V 596"></path>
+                                <path d="M 840 358 H 880"></path>
+                                <path d="M 775 386 V 596"></path>
+                                <path class="workflow-branch" d="M 1010 128 H 1030 V 214"></path>
+                                <path class="workflow-branch" d="M 1010 358 H 1030 V 214"></path>
+                                <path d="M 1030 214 H 1070"></path>
+                                <path d="M 1135 242 V 596"></path>
+                                <path d="M 1200 214 H 1210 V 358 H 1250"></path>
+                                <path d="M 1380 358 H 1420"></path>
+                                <path class="workflow-branch" d="M 1315 386 V 520"></path>
+                                <path class="workflow-branch" d="M 1295 520 H 1615"></path>
+                                <path d="M 1295 520 V 596"></path>
+                                <path d="M 1455 520 V 596"></path>
+                                <path d="M 1615 520 V 596"></path>
+                                <path class="workflow-branch" d="M 1550 128 H 1570 V 358"></path>
+                                <path class="workflow-branch" d="M 1550 358 H 1570"></path>
+                                <path d="M 1570 358 H 1610"></path>
+                                <path d="M 1740 358 H 1780"></path>
+                                <path d="M 1910 358 H 1950"></path>
+                                <path class="workflow-loop" d="M 1675 386 V 500 H 1315"></path>
+                            </svg>
+
+                            <article class="workflow-node workflow-node--marketing node-okr">
+                                <strong>OKR</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--ux node-business-goals">
+                                <strong>Business goals</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--ux node-user-problems">
+                                <strong>User problems</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--shared node-design-backlog">
+                                <strong>Design backlog</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--shared node-prd">
+                                <strong>PRD</strong>
+                            </article>
+
+                            <article class="workflow-node workflow-node--ux node-design-brief">
+                                <strong>Design brief</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--ux node-ux-audit">
+                                <strong>UX audit</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--ux node-ux-research">
+                                <strong>UX research</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--marketing node-interview">
+                                <strong>Interview / workshop</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--shared node-insights">
+                                <strong>Insights</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--ux node-ux-design">
+                                <strong>UX design</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--marketing node-user-test">
+                                <strong>User test</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--ux node-usability">
+                                <strong>Usability testing</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--ux node-iteration">
+                                <strong>Iteration</strong>
+                            </article>
+                            <article class="workflow-node workflow-node--ux node-design-execution">
+                                <strong>Design execution</strong>
+                            </article>
+                            <div class="workflow-continues" aria-label="The workflow continues"><span></span><span></span><span></span></div>
+
+                            <div class="workflow-output output-design-brief"><span>Design brief</span></div>
+                            <div class="workflow-output output-audit"><span>Audit report</span></div>
+                            <div class="workflow-output output-research"><span>Research report</span></div>
+                            <div class="workflow-output output-prototype"><span>Hi-fi prototype</span></div>
+                            <div class="workflow-output output-user-flow"><span>User flow</span></div>
+                            <div class="workflow-output output-design-system"><span>Design system</span></div>
+                        </div>
+                    </div>
+                    <p class="workflow-hint"><span class="material-symbols-outlined" aria-hidden="true">swipe</span> Scroll horizontally to follow the full workflow</p>
+                </section>
+            </section>
+
+            <section class="playbook-panel" id="panel-meetings">
+                <h2 class="plain-section-title">Meeting types</h2>
+                <div class="cadence-grid">
+                    <a class="cadence-card cadence-card--link" href="https://docs.google.com/document/d/1HqnxZR3yyyZp5Wh86Z5nL4UntlZt7FdVGB_aRSeTH2Y/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <div class="cadence-card__top">
+                            <span class="material-symbols-outlined" aria-hidden="true">event_repeat</span>
+                            <span class="cadence">Every two weeks</span>
+                        </div>
+                        <h3>Bi-weekly check-in</h3>
+                        <p>Project updates, open questions, blockers, dependencies, and near-term roadmap decisions.</p>
+                        <span class="inline-link">Open the 1:1 doc <span class="plain-chevron material-symbols-outlined" aria-hidden="true">chevron_right</span></span>
+                    </a>
+                    <article class="cadence-card">
+                        <div class="cadence-card__top">
+                            <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                            <span class="cadence">Monthly</span>
+                        </div>
+                        <h3>Monthly Review</h3>
+                        <p>Review customer insights, campaign and product performance, roadmap progress, success measurements, and feature impact.</p>
+                    </article>
+                    <article class="cadence-card cadence-card--important">
+                        <div class="cadence-card__top">
+                            <span class="material-symbols-outlined" aria-hidden="true">route</span>
+                            <span class="cadence">Quarterly</span>
+                        </div>
+                        <h3>Quarterly Roadmap</h3>
+                        <p>Align OKRs and business goals, prioritize user problems, expose dependencies, and agree on the features worth investing in.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <section class="impact-section" aria-labelledby="impact-title">
+            <div class="impact-heading">
+                <div>
+                    <h2 id="impact-title">Impact</h2>
+                    <p>We track what changed, not just what shipped. Each quarter, Marketing and UX capture the wins that moved customer behaviour, business outcomes, or the quality of the product experience.</p>
+                </div>
+                <div class="impact-quarter-select">
+                    <select class="impact-quarter-label" aria-label="Impact quarter">
+                        <option selected>2026 Q4</option>
+                        <option>2027 Q1</option>
+                        <option>2027 Q2</option>
+                        <option>2027 Q3</option>
+                        <option>2027 Q4</option>
+                    </select>
+                    <span class="impact-quarter-chevron material-symbols-outlined" aria-hidden="true">expand_more</span>
+                </div>
+            </div>
+
+            <div class="impact-board">
+                <div class="impact-grid">
+                    <article class="impact-win">
+                        <span class="impact-win__number">01</span>
+                        <h3>Shared direction</h3>
+                        <p>Aligned campaign priorities and product decisions around the same business goal and user problem.</p>
+                    </article>
+                    <article class="impact-win">
+                        <span class="impact-win__number">02</span>
+                        <h3>Evidence before execution</h3>
+                        <p>Combined search behaviour, campaign responses, and UX evidence before committing to solutions.</p>
+                    </article>
+                    <article class="impact-win">
+                        <span class="impact-win__number">03</span>
+                        <h3>Experience outcomes</h3>
+                        <p>Connected traffic and conversion goals with confidence, usability, engagement, and repeat purchase.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="../">UX COOKBOOK</a>
+        <span>Marketing × UX</span>
+    </footer>
+</body>
+</html>
