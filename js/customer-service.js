@@ -115,8 +115,7 @@ if (form) {
             top.append(title, time);
 
             const meta = createElement('div', 'history-entry__meta');
-            [entry.business_goal, `${entry.frequency} frequency`, `${entry.severity} severity`]
-                .forEach(value => meta.append(createElement('span', '', value)));
+            meta.append(createElement('span', '', entry.business_goal));
 
             const detail = createElement('div', 'history-entry__detail');
             detail.append(createElement('p', '', `Severity reason: ${entry.severity_reason}`));
@@ -295,8 +294,8 @@ if (form) {
             created_by: uploadUser.id,
             issue: data.get('issue').trim(),
             business_goal: data.get('businessGoal'),
-            frequency: data.get('frequency'),
-            severity: data.get('severity'),
+            frequency: 'Not captured',
+            severity: 'Not captured',
             severity_reason: data.get('severityReason').trim(),
             quotation: data.get('quotation').trim(),
             user_goal: data.get('userGoal').trim(),
@@ -332,8 +331,6 @@ if (form) {
             'Date',
             'Question or complaint',
             'Business goal',
-            'Frequency',
-            'Severity',
             'Severity reason',
             'Example quotations',
             'User goals',
@@ -344,8 +341,6 @@ if (form) {
             entry.created_at,
             entry.issue,
             entry.business_goal,
-            entry.frequency,
-            entry.severity,
             entry.severity_reason,
             entry.quotation,
             entry.user_goal,
