@@ -1136,6 +1136,13 @@ footer a {
     }
 }
 
+@media (min-width: 768px) {
+    .cs-header {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
 @media (min-width: 900px) {
     .cs-header,
     main,

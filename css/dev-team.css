@@ -310,8 +310,14 @@ footer a:hover {
     }
 }
 
+@media (min-width: 768px) {
+    .dev-header {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
 @media (min-width: 1024px) {
-    .dev-header,
     main,
     footer {
         padding-right: 80px;

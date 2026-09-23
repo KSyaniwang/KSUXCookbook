@@ -1032,6 +1032,13 @@ footer a {
     }
 }
 
+@media (min-width: 768px) {
+    .marketing-header {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
 @media (min-width: 900px) {
     .marketing-header,
     main,

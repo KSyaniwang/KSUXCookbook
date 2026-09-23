@@ -763,6 +763,20 @@ footer a:hover {
     color: var(--color-pink-500);
 }
 
+@media (min-width: 640px) {
+    .creative-header {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .creative-header {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
 @media (max-width: 900px) {
     .guide-list {
         grid-template-columns: 1fr;
