@@ -1,7 +1,6 @@
 const CONFIG = {
   ownerEmail: 'yani.wang@koreanskincare.com',
-  historyFolderName: 'UX Cookbook – CS Insight History',
-  senderName: 'UX Cookbook'
+  historyFolderName: 'UX Cookbook – CS Insight History'
 };
 
 function setup() {
@@ -61,8 +60,6 @@ function doPost(event) {
       submittedAt: payload.submittedAt ? new Date(payload.submittedAt) : new Date(),
       files
     });
-
-    sendOwnerNotification_(result);
 
     return jsonResponse_({
       ok: true,
@@ -151,30 +148,6 @@ function appendSection_(body, heading, content) {
   body.appendParagraph(heading)
     .setHeading(DocumentApp.ParagraphHeading.HEADING1);
   body.appendParagraph(content);
-}
-
-function sendOwnerNotification_(result) {
-  const fileList = result.uploadedFiles.length
-    ? `<p><strong>Supporting files:</strong> ${result.uploadedFiles.length}</p>`
-    : '<p><strong>Supporting files:</strong> None</p>';
-
-  MailApp.sendEmail({
-    to: CONFIG.ownerEmail,
-    subject: `New CS insight: ${result.title}`,
-    name: CONFIG.senderName,
-    body: [
-      'A new CS insight document is ready.',
-      '',
-      `Document: ${result.documentUrl}`,
-      `History folder: ${result.folderUrl}`
-    ].join('\n'),
-    htmlBody: `
-      <p>A new CS insight document is ready.</p>
-      ${fileList}
-      <p><a href="${result.documentUrl}">Open the Google Doc</a></p>
-      <p><a href="${result.folderUrl}">Open all CS insight history</a></p>
-    `
-  });
 }
 
 function getHistoryFolder_() {

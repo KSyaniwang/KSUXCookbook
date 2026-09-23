@@ -160,7 +160,7 @@ if (form) {
 
             form.reset();
             updateFileSelection();
-            formStatus.textContent = 'Google Doc created and emailed to UX.';
+            formStatus.textContent = 'Google Doc created in Drive.';
         } catch (error) {
             formStatus.textContent = error.message || 'The Google Doc could not be created.';
         } finally {

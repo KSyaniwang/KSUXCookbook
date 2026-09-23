@@ -1,8 +1,7 @@
 # Google Docs CS handoff
 
 This Apps Script turns each Customer Service submission into a private Google
-Doc, stores it in Drive, and emails the document link to
-`yani.wang@koreanskincare.com`.
+Doc and stores it in Drive.
 
 ## Deploy
 
@@ -10,7 +9,7 @@ Doc, stores it in Drive, and emails the document link to
 2. Replace `Code.gs` with this folder's `Code.gs`.
 3. Open **Project Settings**, enable the manifest file, and replace it with
    `appsscript.json`.
-4. Run `setup` once and approve the requested Drive, Docs, and email access.
+4. Run `setup` once and approve the requested Drive and Docs access.
 5. Select **Deploy → New deployment → Web app**.
 6. Set **Execute as** to yourself and **Who has access** to **Anyone**.
 7. Copy the `/exec` URL into `appsScriptUrl` in

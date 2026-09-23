@@ -360,36 +360,6 @@ footer {
     font-size: 18px;
 }
 
-.drive-history__steps {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid var(--color-border-primary);
-}
-
-.drive-history__steps > div {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.drive-history__steps span {
-    color: var(--color-pink-500);
-    font-size: var(--type-caption-lg-size);
-    line-height: var(--type-caption-lg-line);
-    font-weight: 700;
-}
-
-.drive-history__steps p {
-    margin: 0;
-    color: var(--color-grey-1000);
-    font-size: var(--type-body-sm-size);
-    line-height: var(--type-body-sm-line);
-    font-weight: 500;
-}
-
 .form-honeypot {
     position: absolute !important;
     width: 1px;
@@ -1201,10 +1171,6 @@ footer a {
 
     .drive-history__button {
         width: 100%;
-    }
-
-    .drive-history__steps {
-        grid-template-columns: 1fr;
     }
 
     .handoff-form,
