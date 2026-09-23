@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&amp;family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link href="../css/design-tokens.css" rel="stylesheet"/>
-    <link href="../css/customer-service.css?v=20260923-2" rel="stylesheet"/>
+    <link href="../css/customer-service.css?v=20260923-3" rel="stylesheet"/>
 </head>
 <body class="cs-page">
     <header class="cs-header">
@@ -88,7 +88,7 @@
                             <span class="file-drop__icon material-symbols-outlined" aria-hidden="true">add_photo_alternate</span>
                             <div>
                                 <strong>Add screenshots or files</strong>
-                                <small>Images, PDFs, documents, spreadsheets, presentations, or text files</small>
+                                <small>Up to 5 files · 8 MB each · 20 MB total</small>
                             </div>
                             <span class="file-drop__action">Choose files</span>
                             <span class="file-selection" data-file-selection>No files selected</span>
@@ -98,45 +98,34 @@
 
                 <div class="form-actions">
                     <p data-form-status aria-live="polite"></p>
-                    <button type="submit">Add to history</button>
+                    <button type="submit">Create Google Doc</button>
                 </div>
             </form>
 
             <div class="history-section handoff-panel" id="handoff-panel-history" role="tabpanel" aria-labelledby="handoff-tab-history" data-handoff-panel="history" hidden>
-                <div class="auth-panel" data-auth-panel>
-                    <div class="auth-signed-out" data-auth-signed-out>
-                        <div>
-                            <h3>Private history</h3>
-                            <p>CS can upload without signing in. Use your approved UX email to view and download submissions.</p>
-                        </div>
-                        <form class="auth-form" data-auth-form>
-                            <label>
-                                <span>Email address</span>
-                                <input name="email" type="email" autocomplete="email" required placeholder="name@company.com"/>
-                            </label>
-                            <button type="submit">Send link</button>
-                        </form>
+                <div class="drive-history">
+                    <span class="drive-history__icon material-symbols-outlined" aria-hidden="true">folder_shared</span>
+                    <div class="drive-history__copy">
+                        <h3>Private document history</h3>
+                        <p>Every submission becomes a Google Doc in your private Drive folder. Google manages access with your existing work account.</p>
                     </div>
-                    <div class="auth-signed-in" data-auth-signed-in hidden>
-                        <p>Signed in as <strong data-auth-email></strong></p>
-                        <button type="button" data-auth-sign-out>Sign out</button>
-                    </div>
-                    <p class="auth-status" data-auth-status aria-live="polite"></p>
+                    <a class="drive-history__button" href="https://drive.google.com/drive/folders/1jyCLTlwlNyIueoNu12ODZA_azw9pQOKL" target="_blank" rel="noopener noreferrer" data-history-link>
+                        Open Google Drive
+                        <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                    </a>
                 </div>
-
-                <div data-history-gate hidden>
-                    <div class="history-heading">
-                        <div>
-                            <h3>Upload history</h3>
-                            <p>Entries and files are shared across authorized devices.</p>
-                        </div>
-                        <button type="button" class="secondary-button" data-export-history>Download history</button>
+                <div class="drive-history__steps" aria-label="How CS insight history works">
+                    <div>
+                        <span>01</span>
+                        <p>CS submits an insight</p>
                     </div>
-                    <div class="history-list" data-history-list>
-                        <div class="history-empty" data-history-empty>
-                            <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
-                            <p>No CS insights have been uploaded yet.</p>
-                        </div>
+                    <div>
+                        <span>02</span>
+                        <p>A Google Doc is generated</p>
+                    </div>
+                    <div>
+                        <span>03</span>
+                        <p>You receive the link by email</p>
                     </div>
                 </div>
             </div>
@@ -227,6 +216,6 @@
         <span>Customer Service × UX</span>
     </footer>
 
-    <script type="module" src="../js/customer-service.js?v=20260923-1"></script>
+    <script type="module" src="../js/customer-service-google.js?v=20260923-3"></script>
 </body>
 </html>

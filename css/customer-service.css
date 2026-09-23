@@ -293,23 +293,25 @@ footer {
     max-width: 760px;
 }
 
-.auth-panel {
-    margin-bottom: 24px;
-    padding: 22px;
-    border: 1px solid var(--color-border-primary);
+.drive-history {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.drive-history__icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
     border-radius: 14px;
-    background: var(--color-white);
+    background: var(--color-pink-cloud);
+    color: var(--color-grey-1000);
+    font-size: 28px;
 }
 
-.auth-signed-out,
-.auth-signed-in {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-.auth-signed-out h3 {
+.drive-history__copy h3 {
     margin: 0;
     font-family: var(--type-family-heading);
     font-size: var(--type-body-lg-size);
@@ -317,85 +319,75 @@ footer {
     font-weight: 500;
 }
 
-.auth-signed-out p,
-.auth-signed-in p {
+.drive-history__copy p {
+    max-width: 660px;
     margin: 6px 0 0;
     color: var(--color-text-default);
     font-size: var(--type-body-sm-size);
     line-height: var(--type-body-sm-line);
 }
 
-.auth-form {
-    display: flex;
-    align-items: flex-end;
-    gap: 10px;
-}
-
-.auth-form label {
-    display: grid;
-    gap: 6px;
-}
-
-.auth-form label span {
-    font-size: var(--type-caption-lg-size);
-    line-height: var(--type-caption-lg-line);
-    font-weight: 700;
-}
-
-.auth-form input {
-    width: min(280px, 52vw);
-    min-height: 42px;
-    padding: 0 14px;
-    border: 1px solid var(--color-border-primary);
-    border-radius: 9999px;
-    outline: 0;
-}
-
-.auth-form input:focus {
-    border-color: var(--color-pink-500);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-pink-500) 18%, transparent);
-}
-
-.auth-form button,
-.auth-signed-in button {
+.drive-history__button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 112px;
-    min-height: 42px;
-    padding: 0 20px;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 18px;
     border: 1px solid var(--color-grey-1000);
     border-radius: 9999px;
     background: var(--color-grey-1000);
     color: var(--color-white);
-    cursor: pointer;
-    font-family: var(--type-family-body);
-    font-size: var(--type-body-sm-size) !important;
-    line-height: 1 !important;
+    font-size: var(--type-body-sm-size);
+    line-height: 1;
     font-weight: 700;
     white-space: nowrap;
     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.auth-form button:hover,
-.auth-signed-in button:hover {
+.drive-history__button:hover {
     border-color: var(--color-pink-500);
     background: var(--color-pink-ks);
     color: var(--color-grey-1000);
 }
 
-.auth-status {
-    min-height: 16px;
-    margin: 12px 0 0;
-    color: var(--color-text-default);
-    font-size: var(--type-caption-lg-size);
-    line-height: var(--type-caption-lg-line);
+.drive-history__button[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.45;
 }
 
-[data-history-gate][hidden],
-.auth-signed-out[hidden],
-.auth-signed-in[hidden] {
-    display: none !important;
+.drive-history__button .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.drive-history__steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--color-border-primary);
+}
+
+.drive-history__steps > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.drive-history__steps span {
+    color: var(--color-pink-500);
+    font-size: var(--type-caption-lg-size);
+    line-height: var(--type-caption-lg-line);
+    font-weight: 700;
+}
+
+.drive-history__steps p {
+    margin: 0;
+    color: var(--color-grey-1000);
+    font-size: var(--type-body-sm-size);
+    line-height: var(--type-body-sm-line);
+    font-weight: 500;
 }
 
 .form-honeypot {
@@ -1197,24 +1189,22 @@ footer a {
     .handoff-heading,
     .workflow-heading,
     .history-heading,
-    .auth-signed-out,
-    .auth-signed-in,
     .form-actions,
     footer {
         align-items: flex-start;
         flex-direction: column;
     }
 
-    .auth-form {
-        align-items: stretch;
-        flex-direction: column;
+    .drive-history {
+        grid-template-columns: 1fr;
+    }
+
+    .drive-history__button {
         width: 100%;
     }
 
-    .auth-form label,
-    .auth-form input,
-    .auth-form button {
-        width: 100%;
+    .drive-history__steps {
+        grid-template-columns: 1fr;
     }
 
     .handoff-form,
